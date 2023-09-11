@@ -91,7 +91,7 @@
  *					public static void main(String[] arg)
  *					{
  *						System.out.println("Hello"); 화면 출력
- *					}	=> 메인 종료
+ *					}	=> 메인 종료 
  *				}	클래스 종료
  */
 public class 자바언어_실행방법 {
