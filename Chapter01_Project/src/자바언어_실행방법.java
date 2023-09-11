@@ -77,8 +77,8 @@
  *
  *				=> 주석 (번역이 안되는 코드)
  *					// 한줄주석
- *				  => ctrl + shift + /   주석
- *				  => ctrl + shift + \   주석풀기
+ *				  => 드래그 후 ctrl + shift + /   주석
+ *				  => 드래그 후 ctrl + shift + \   주석풀기
  *				
  *				=> 화면출력
  *					sysout => ctrl + space
