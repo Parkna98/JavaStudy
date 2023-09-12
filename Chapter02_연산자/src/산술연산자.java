@@ -28,6 +28,31 @@ public class 산술연산자 {
 		System.out.println(-a+"%"+b+"="+(-5%2));
 		System.out.println(a+"%"+-b+"="+(5%-2));
 		System.out.println(-a+"%"+-b+"="+(-5%-2));
+		
+		/*
+		 * 		자동 형변환
+		 * 			작은데이터형 => 큰데이터형
+		 * 		강제 형변환
+		 * 			큰데이터형 => 작은데이터형
+		 * 		===============================> 자동 형변환
+		 * 		byte < char / short < int < long < float < double
+		 * 		강제 형변환 <===============================
+		 * 
+		 * 		자동 형변환
+		 * 		int a='A';
+		 * 			=> a=65
+		 * 		double d=100;
+		 * 				 ----int
+		 * 			=> d=100.0
+		 * 
+		 */
+		int aa='A';
+		System.out.println("aa="+aa); // char => int
+		
+		double dd=100;
+		System.out.println("dd="+dd); // int => double
+		
+		System.out.println(100+10.5+10.5F+'A'); // 출력값 데이터형 : double (가장큰데이터형)
 	}
 
 }
