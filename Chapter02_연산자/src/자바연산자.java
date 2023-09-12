@@ -76,6 +76,9 @@ public class 자바연산자 {
 		System.out.println(~100); // 100을 음수로 바꾸면 -101
 		System.out.println('5'+6); // '5'와 "5"의 차이점 구분할 것!
 		System.out.println("5"+6); // 
+		System.out.println('박'+6); // '박'+6은 '박'에 해당되는 유니코드와 6이 더해짐 => 정수
+		System.out.println("박"+6); // "박"+6은 "박"을 그대로 6과 결합 => 문자열
+		// System.out.println("박"*6); Error! 문자열과 숫자는 안곱해지는듯
 
 	}
 
