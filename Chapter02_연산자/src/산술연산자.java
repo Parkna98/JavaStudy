@@ -62,7 +62,7 @@ public class 산술연산자 {
 		 *  형변환이 이뤄질 경우 과정을 하나 더하는 것이기 때문에 속도저하의 원인 
 		 */
 		System.out.println('A'+'B'); // 65+66 => 131(int)
-		// int 이하 (byte, char, short) 연산 => 결과값 int
+		// int 이하 (byte, char, short) 연산 => 결과값 int 
 	}
 
 }
