@@ -35,7 +35,9 @@
  *						-------------
  *						int + double => double (UpCasting)
  *						--- double 						
- *
+ *						char + char => int
+ *						byte + byte => int
+ *						char + byte => int
  * 				쉬프트연산자(<<, >>) 비트이동 연산자
  * 				비트연산자 (&, |, ^)
  * 				비교연산자 (==, !=, <, >, <=, >=)
