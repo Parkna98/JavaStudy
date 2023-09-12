@@ -53,6 +53,13 @@ public class 산술연산자 {
 		System.out.println("dd="+dd); // int => double
 		
 		System.out.println(100+10.5+10.5F+'A'); // 출력값 데이터형 : double (가장큰데이터형)
+		//                 100.0+10.5+10.5+65.0 => 186.0
+		// 자동 형변환이 있는 경우 => 연산은 같은 데이터형끼리만 연산
+		/*
+		 * 	'A' + 10
+		 * 	---
+		 * 	char => 65(int) + 10 ==> 75 (int)
+		 */
 	}
 
 }
