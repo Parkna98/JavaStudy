@@ -18,7 +18,8 @@ public class 산술연산자 {
 		System.out.println("총점: "+total);
 		// 평균
 		double ave = total / 3.0 ;// **3으로 나누면 int라서 소수점 없어지므로 3.0으로 나눠야함!!
-		System.out.println("평균: "+ave); // => 평균 : 88.666666666667 
+		System.out.println("평균: "+ave); // => 평균 : 88.666666666667
+		System.out.printf("평균:%.2f\n",ave); // printf 쓰고 %.2f쓰고 ,(콤마)로 값설정 / 소수점 두자리 .3f / .4f 등등
 		
 		System.out.println("========== & ==========");
 		int a=5;
