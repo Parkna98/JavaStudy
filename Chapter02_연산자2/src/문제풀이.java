@@ -2,8 +2,9 @@
  *  println 과 printf 의 차이
  *  
  * 
- * 
+ *  
  */
+import java.util.Scanner; // 값을 받기위한 방법
 public class 문제풀이 {
 
 	public static void main(String[] args) {
@@ -37,8 +38,8 @@ public class 문제풀이 {
 		 */
 
 		/* (7)
-		 * int num1=10, num2=10; int a, b; num1 = num1 + 1; a = num1;
-		 * System.out.printf("%d, %d \n", a, num1); b = num2; num2 = num2 + 1;
+		 * int num1=10, num2=10; int a, b; num1 = num1 + 1; a = num1; //a=++num1
+		 * System.out.printf("%d, %d \n", a, num1); b = num2; num2 = num2 + 1; //b=num2++
 		 * System.out.printf("%d, %d \n", b, num2);
 		 */
 	
@@ -65,6 +66,20 @@ public class 문제풀이 {
 		 * 
 		 * System.out.println("a%b="+(a%b));
 		 */
+		
+		Scanner scan=new Scanner(System.in);
+		//                      -----------키보드 입력
+		/*
+		 * System.out.print("첫번째 정수 입력:"); int a=scan.nextInt();
+		 * System.out.print("두번째 정수 입력:"); int b=scan.nextInt();
+		 * System.out.println(a-b); System.out.println(a*b);
+		 */
+		
+		System.out.print("정수 두개 입력 : "); // 두개 한꺼번에 입력가능, 키보드로 공백을 주어 두개 입력
+		int a=scan.nextInt();
+		int b=scan.nextInt();
+		System.out.println(a-b); 
+		System.out.println(a*b);
 	}
 
 }
