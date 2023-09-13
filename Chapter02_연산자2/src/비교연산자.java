@@ -29,7 +29,7 @@ public class 비교연산자 {
 		System.out.println("a==b: "+(a==b));
 		System.out.println("a!=b: "+(a!=b));
 		System.out.println("a<b: "+(a<b));
-		System.out.println("a>b: "+(a>b)); ㅁㅁㅁㅁ
+		System.out.println("a>b: "+(a>b));
 		System.out.println("a<=b: "+(a<=b));
 		// a<b || a==b
 		System.out.println("a>=b: "+(a>=b));
