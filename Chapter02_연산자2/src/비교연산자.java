@@ -35,7 +35,7 @@ public class 비교연산자 {
 		System.out.println("a>=b: "+(a>=b));
 		// a>b || a==b
 		
-		char c=(char)((Math.random()*26)+65); //A의 유니코드가 65이기 때문에 +65
+		char c=(char)((Math.random()*26)+65); //A의 유니코드가 65이기 때문에 +65 // 26은 알파벳갯수 (A~Z)
 		char d=(char)((Math.random()*26)+65); //A의 유니코드가 65이기 때문에 +65
 		System.out.println("c="+c); // 위에 있는 코드 복붙해서 붙였는데 문자만 바꾸면 되는 경우
 		System.out.println("d="+d); // 바꿀부분 드래그하고 Ctrl F 해서 a->b, c->d 로 바꾸기 가능 (File - Replace)
