@@ -48,6 +48,8 @@ public class 논리연산자 {
 		int b=21;
 		
 		boolean bCheck=(a%2==0)&&(b%2!=0); // %를 이용한 짝수,홀수 판별
+
+		bCheck = (a%2==0)||(b%2!=0);
 		System.out.println(bCheck);
 		
 		
