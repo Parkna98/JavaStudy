@@ -32,6 +32,25 @@ public class 논리연산자 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		/*
+		 * int a=10; int b=9;
+		 * 
+		 * boolean bCheck=a<b && ++b==a; // false&&true => false
+		 * System.out.println(bCheck); System.out.println(b); // b=9 why? boolean문장에서 앞에
+		 * false이기때문에 뒤의 문장 ++b 수행할 필요없어서 b는 그대로 9
+		 * 
+		 * boolean cCheck=a<b || ++b==a; System.out.println(bCheck);
+		 * System.out.println(b); // b=10 why? ||문장에서 앞이 false라서 뒤의 연산까지 수행하기때문에 ++b가
+		 * 적용됨
+		 */
+		
+		int a=10;
+		int b=21;
+		
+		boolean bCheck=(a%2==0)&&(b%2!=0); // %를 이용한 짝수,홀수 판별
+		System.out.println(bCheck);
+		
+		
 
 	}
 
