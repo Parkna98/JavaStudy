@@ -7,10 +7,11 @@ public class 문제3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		char ch='M';
-		char lowerCase =(char)(((int)ch>=65 && (int)ch<=90)?(int)ch+32:1); // 대문자인 경우? (int)ch>=65 && (int)ch<=90
+		char ch='u';
+		char lowerCase =ch>='A' && ch<='Z'?(char)(ch+32):ch; // 대문자인 경우? (int)ch>=65 && (int)ch<=90
 		System.out.println("ch: "+ ch);
 		System.out.println("ch to lowerCase:"+ lowerCase);
+		System.out.println();
 	}
 
 }
