@@ -27,6 +27,21 @@ public class 단항연산자 {
 		 * true/false로 번갈아가기, 3명이상이면 %활용해서 번갈아가기 { aa=!aa; if(aa==true) {
 		 * System.out.println("사용자"); } else { System.out.println("컴퓨터"); } break; }
 		 */
+		int a=1;
+		while(a==3);
+			{ a++;
+				if(a%3==1) {
+					System.out.println("플레이어1");
+					
+				}
+				if(a%3==2) {
+					System.out.println("플레이어2");
+				}
+				else {
+					System.out.println("플레이어3");
+				}
+			
+			}
 	}
 
 }
