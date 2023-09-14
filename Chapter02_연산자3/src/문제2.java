@@ -6,7 +6,7 @@ public class 문제2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		char ch= '9';
+		char ch= 'k';
 		boolean b = (((int)ch>=65 && (int)ch<=90)||((int)ch>=97 && (int)ch<=122)||((int)ch>=48 && (int)ch<=57)?true:false);
 		System.out.println(b);
 	}
