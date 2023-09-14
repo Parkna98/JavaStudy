@@ -11,6 +11,7 @@ public class aa {
 		
 		char ch='d';
 		System.out.println(((int)ch>=65 && (int)ch<=90)?1:2);
+		System.out.println(ch+32);
 	}
 
 }
