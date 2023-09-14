@@ -149,17 +149,54 @@
  * 				+= =============> a+=1 ==> a=a+1  => 여러개 증가
  * 				-= =============> a-=1 ==> a=a-1
  * 		삼항연산자 : 조건 연산자 (조건)?():()
- * 			
+ * 			(조건)?(값1):(값2)
+ * 			-----
+ * 			true => 값1
+ * 			false => 값2 ==> 페이징
+ * 
  * 			
  * 		
  * 		
  * 		
  */
+// 산술연산자
+// 정수 3개 입력을 받아서 총점, 평균
+import java.util.Scanner; // Scanner 클래스를 불러온다
+//		-------폴더명, java.util 이란 폴더에서 Scanner기능을 가져온다
+// c => include
+// c# => using
+// javaScript => import
 public class 자바연산자 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
+		int kor,eng,math;
+		int total;
+		double avg;
+		// =================== 선언 (메모리 저장공간 생성)
+		// 메모리 공간에 값을 첨부 => 변수의 초기화
+		Scanner scan=new Scanner(System.in);
+		//						----------- 키보드 입력값
+		System.out.println("국어,영어,수학 점수 입력(90 90 90):");
+		kor = scan.nextInt();
+		eng = scan.nextInt();
+		math = scan.nextInt();
+		// new => 메모리에 저장 (클래스)
+		// 연산처리 ==> 
+		total = kor+eng+math;
+		avg = total/3.0;
+		// 결과 출력
+		System.out.println("국어점수:"+kor);
+		System.out.println("영어점수:"+eng);
+		System.out.println("수학점수:"+math);
+		System.out.println("총점:"+total);
+		System.out.printf("평균:%.2f\n",avg);
+		System.out.print(avg>=90 && avg<=100?"A학점":"");
+		System.out.print(avg>=80 && avg<=89?"B학점":"");
+		System.out.print(avg>=70 && avg<=79?"C학점":"");
+		System.out.print(avg>=60 && avg<=69?"D학점":"");
+		System.out.print(avg<60?"F학점":"");
 	}
 
 }
