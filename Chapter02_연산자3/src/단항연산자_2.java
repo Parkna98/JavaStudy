@@ -16,6 +16,8 @@ public class 단항연산자_2 {
 		System.out.println("a="+a);
 		System.out.println("d="+d);
 		System.out.println("c="+c);
+		c='0'; // 'A' => 65, 'a' => 97, '0' => 48
+		System.out.println("f="+int(c));
 	}
 
 }
