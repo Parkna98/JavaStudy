@@ -127,7 +127,7 @@ public class 제어문의종류 {
 		if(num%2!=0)
 		{
 			System.out.println(num+"는(은) 홀수입니다");
-		}
+		} 
 //		else
 //		{
 //			System.out.println(num+"는(은) 홀수입니다"); 

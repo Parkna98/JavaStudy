@@ -112,7 +112,7 @@
  * 											  결과값
  * 										true && true => true
  * 										true && false => false
- * 										false && true => false
+ * 										false && true => false 
  * 										false && false => false
  * 				
  * 					(조건)  ||  (조건) => a<'A' || a>'Z'
