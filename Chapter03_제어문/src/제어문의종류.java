@@ -124,7 +124,7 @@ public class 제어문의종류 {
 		{
 			System.out.println(num+"는(은) 짝수입니다");
 		}
-		if(num%2!=0)
+		if(num%2!=0) // num%2==1, !(num%2==0) 표현방식은 매우 다양함
 		{
 			System.out.println(num+"는(은) 홀수입니다");
 		} 
