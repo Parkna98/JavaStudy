@@ -5,8 +5,8 @@ public class 문제6 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int ch=(int)(Math.random()*26)+65;
-		int ch2=(int)(Math.random()*26)+97;
+		int ch=(int)(Math.random()*26)+65;  // ch를 char으로 잡고 뒤에 랜덤수를 char로 변환하는게 밑에처럼 (char)계속 안붙여도 될듯
+		int ch2=(int)(Math.random()*26)+97; //
 		int num=(int)(Math.random()*2);
 		
 		if(num==0)
@@ -33,8 +33,20 @@ public class 문제6 {
 				System.out.println((char)ch2+"는(은) 소문자입니다");
 			}
 		}
-		
-		
+//		
+//		좀더 짧게 하는 법 참고
+//		============================================
+//		char c=' ';
+//		int a=(int)(Math.random()*2); // 0,1
+//		if(a==0)
+//		{
+//			c=(char)(Math.random()*26+65); // 대문자
+//		}
+//		if(a==1)
+//		{
+//			c=(char)(Math.random()*26+97); // 소문자
+//		}
+//		System.out.println("c="+c);
 		
 		
 	}

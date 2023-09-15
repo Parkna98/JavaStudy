@@ -22,9 +22,9 @@ public class 문제4 {
 			max=num3;
 		
 		int min=num1;
-		if(min<num2)
+		if(min>num2)
 			min=num2;
-		if(min<num3)
+		if(min>num3)
 			min=num3;
 		
 		int total=num1+num2+num3;
@@ -33,7 +33,7 @@ public class 문제4 {
 		System.out.println("Max:"+max);
 		System.out.println("Min:"+min);
 		System.out.println("Total:"+total);
-		System.out.printf("Average:%.2f",avg);
+		System.out.printf("Average:%.2f\n",avg);
 	}
 
 }

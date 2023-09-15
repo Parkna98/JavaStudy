@@ -10,9 +10,9 @@ public class 문제5 {
 		System.out.print("정수 입력:");
 		int num=scan.nextInt();
 		
-		if(num>0)
+		if(num>0)  //  cf) 자바에서는 0을 음수로 간주함. 
 		{
-			System.out.println(num+"는(은) 양수입니다");
+			System.out.println(num+"는(은) 양수입니다"); 
 		}
 		if(num<0)
 		{
