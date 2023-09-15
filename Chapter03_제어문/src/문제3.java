@@ -17,7 +17,7 @@ public class 문제3 {
 		int score=scan.nextInt();
 		
 		
-		if(score<0 || score>100)
+		if(score<0 || score>100) //                  score<0 || score>100 이 조건과 score>=0 && score<=100 이 조건으로 크게 나누기가 좋을듯 (오류/!오류)
 			System.out.println("잘못 입력된 점수입니다.");
 		if(num==4)
 		{
