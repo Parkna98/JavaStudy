@@ -24,7 +24,44 @@ public class 제어문_조건문_2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		char c='A';
+		// 대문자 / 소문자
+		if(c>='A' && c<='Z') // 대문자 여부
+		{
+			System.out.println(c+"는(은) 대문자");
+		}
+		else 
+		{
+			System.out.println(c+"는(은) 소문자");
+		}
+		// else문장은 독립적으로 사용 불가 => if문과 같이 사용
+		// else문장은 바로 위에 있는 if만 지원한다
+		/*
+		 * 	if()
+		 *  {
+		 *  }
+		 *  ---------
+		 * 	if()
+		 * 	{
+		 * 	}
+		 *  ---------
+		 * 	if()
+		 *  {
+		 * 	}
+		 * 	else
+		 *  {
+		 * 	}
+		 */
+		// 56page
+		int a=11;
+		if(a%2==0)
+		{
+			System.out.println(a+"는(은) 짝수");
+		}
+		else
+		{
+			System.out.println(a+"는(은) 홀수");
+		}
 	}
 
 }
