@@ -30,7 +30,7 @@ public class 제어문_조건문_3_1 {
 		op=scan.next().charAt(0);
 		
 		if(op=='+')
-			System.out.println(num1+"+"+num2+"="+(num1+num2));
+			System.out.println(num1+"+"+num2+"="+(num1+num2)); // 문장이 1개일 경우 굳이 블럭{} 하지 않아도됨. 2개이상이면 {}
 		else if(op=='-')
 			System.out.println(num1+"-"+num2+"="+(num1-num2));
 		else if(op=='*')
