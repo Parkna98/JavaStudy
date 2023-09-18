@@ -35,8 +35,13 @@ public class 제어문_조건문_3_1 {
 			System.out.println(num1+"-"+num2+"="+(num1-num2));
 		else if(op=='*')
 			System.out.println(num1+"*"+num2+"="+(num1*num2));
-		else if(op=='/')
-			System.out.println(num1+"/"+num2+"="+(num1/num2));
+		else if(op=='/') // 0으로 나눌 경우 오류 발생
+		{
+			if(num2==0)
+				System.out.println("0으로 나눌 수 없습니다");
+			else
+				System.out.println(num1+"/"+num2+"="+(num1/num2));	
+		}
 		else
 			System.out.println("잘못된 연산자 입니다");
 		
