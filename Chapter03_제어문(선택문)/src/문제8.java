@@ -30,7 +30,7 @@ public class 문제8 {
 			case 0:
 				System.out.println("컴퓨터 Win");
 				break;
-			case 1:
+			case 1: 
 				System.out.println("비겼다");
 				break;
 			case 2:
