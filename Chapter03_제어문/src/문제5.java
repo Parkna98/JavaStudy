@@ -22,6 +22,8 @@ public class 문제5 {
 		{
 			System.out.println(num+"는(은) 0입니다");
 		}
+		
+		System.out.println();
 	}
 
 }
