@@ -35,5 +35,5 @@ public class 문제7 {
 				System.out.println("잘못된 입력입니다");
 		} 
 	}
-
+ 
 }
