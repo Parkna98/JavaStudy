@@ -62,7 +62,7 @@ public class 제어문_조건문_3_2 {
 		else if(user==0)
 			System.out.println("보");
 		
-		int res=com=user;
+		int res=com=user;             //   소스코딩은 최대한 짧고 효율적이게!
 		if(res==2 || res==-1)
 		{
 			System.out.println("Com Win");
