@@ -15,7 +15,7 @@ public class 문제3 {
 		}
 		else
 		{
-			System.out.println(num+"의 절댓값은 "+(-num));
+			System.out.println(num+"의 절댓값은 "+(-num)); // 절댓값 메소드 : Math.abs(num)  
 		}
 	}
 

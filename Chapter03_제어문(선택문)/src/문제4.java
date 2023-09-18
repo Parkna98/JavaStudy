@@ -9,6 +9,13 @@ public class 문제4 {
 		System.out.print("년도 입력:");
 		year=scan.nextInt();
 		
+		/*
+		 *  윤년 => 로마시대 (암호화)
+		 *  	4년마다 윤년
+		 *  	100년마다 제외
+		 *  	400년마다 윤년
+		 *  	(윤년조건 알고있으면 좋음)
+		 */
 		if((year%4==0 && year%100!=0) || (year%400==0))
 			System.out.println(year+"년도는 윤년입니다");
 		else

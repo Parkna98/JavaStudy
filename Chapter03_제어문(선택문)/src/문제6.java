@@ -12,7 +12,7 @@ public class 문제6 {
 		num=scan.nextInt();
 		int temp_num = num/10;
 		
-		switch(temp_num)
+		switch(temp_num) // switch 조건에는 정수,문자,문자열만 가능 => 실수는 불가하므로 임시변수 미리 정수로 변환할것
 		{
 			case 10:
 			case 9:
