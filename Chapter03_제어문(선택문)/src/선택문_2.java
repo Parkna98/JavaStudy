@@ -30,7 +30,7 @@ public class 선택문_2 {
 			break;
 		case "/":
 			result=num1/num2;
-			break;				// break를 다 없앤다면, 값을 10,2,- 넣었을때 결과는 5 => break가 없어서 맨마지막까지 감
+			break;				// break를 다 없앤다면, 값을 10,2,- 넣었을때 결과는 5 => break가 없어서 맨마지막까지 감 //주의
 		default:
 			System.out.println("잘못된 입력입니다.");
 		}
