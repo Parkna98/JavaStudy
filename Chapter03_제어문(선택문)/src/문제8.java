@@ -26,7 +26,7 @@ public class 문제8 {
 			break;
 			case 1: // 컴퓨터 바위
 			switch(user)
-			{
+			{ 
 			case 0:
 				System.out.println("컴퓨터 Win");
 				break;
