@@ -24,7 +24,7 @@ public class 문제8 {
 				System.out.println("컴퓨터 Win");
 			}
 			break;
-			case 1: // 컴퓨터 바위
+			case 1: // 컴퓨터 바위 
 			switch(user)
 			{ 
 			case 0:
