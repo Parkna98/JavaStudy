@@ -33,7 +33,7 @@ public class 문제7 {
 				break;
 			default :
 				System.out.println("잘못된 입력입니다");
-		}
+		} 
 	}
 
 }
