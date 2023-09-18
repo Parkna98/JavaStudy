@@ -14,8 +14,8 @@ public class 문제7 {
 		num2=scan.nextInt();
 		
 		System.out.print("+,-,*,/ 입력: ");
-		switch(scan.next())
-		{
+		switch(scan.next())		// 처음에 char형으로 op변수 선언하고 초기화해도됨 => char이므로 scan.next.charAt(0)으로 값 받아야함 
+		{						//										  case문에도 ""가 아닌 ''써야함 (char)
 			case "+":
 				System.out.println(num1+"+"+num2+"="+(num1+num2));
 				break;
