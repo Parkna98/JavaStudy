@@ -54,19 +54,62 @@
  * 					}
  * 					
  * 		반복문 // 65page
+ * 			===============================================================
+ * 				DB단		: DBA
+ * 				View단	: HTML, JS, 
+ * 				Back단	: Java
+ * 				--------------------
+ * 
  * 			=> 종류, 형식
  * 				1) 종료
- * 					for		 => 반복횟수가 있는 경우
+ * 					**for	 => 반복횟수가 있는 경우
  * 								웹) 목록출력, 쿠키출력...
- * 					while	 => 반복횟수가 정해지지 않은 경우 => 선조건
+ * 								=> 출력용 (JavaScript)
+ * 					**while	 => 반복횟수가 정해지지 않은 경우 => 선조건
  * 							 	서버프로그램, 게임...
  * 								데이터베이스 프로그램, 파일읽기
+ * 								=> 데이터관리 (Java)
+ * 
  * 					while(조건문)
  * 					{
  * 						반복 실행문장
  * 					}
  * 					do~while => 반복횟수가 정해지지 않은 경우 ==> 최소 한번은 반드시 실행
  * 							 => 후조건
+ * 					do{
+ * 						반복실행문
+ * 					}while(조건문) a!=10
+ * 
+ * 		1) for => 2차 for (알고리즘) => 코테
+ * 			형식) 
+ *						false => 종료 
+ * 					 ① => ②  ← ④
+ * 				for(초기값;조건식;증감식)
+ * 				{		 -----
+ * 						 true ↗
+ * 						  ↓
+ * 						  ③
+ * 					반복 실행문장
+ * 				}
+ * 					1=>2=>3=>4
+ * 					  ========반복 (2가 false일 때까지 반복)
+ * 				
+ * 					   1      2    4
+ * 				for(int i=1;i<=10;i++) ==> i=2
+ * 				{    3
+ * 					수행
+ * 	 			}
+ * 		
+ * 				초기값 : 조건식에 사용할 변수 선언 => 값은 한번만 사용할 수 있다
+ * 				조건식 : 반복횟수 => 반복문을 중단할 지 여부 확인
+ * 						false => 종료, true => 반복 수행
+ * 				증가식 : 조건식이 false가 되는 조건을 만든다
+ * 				----
+ * 				  한개 ++
+ * 				  여러개 +=
+ * 
+ * 				  
+ * 
  * 
  * 		반복제어문 
  */
@@ -74,7 +117,32 @@ public class 제어문_반복문_1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		System.out.println("Hello For문");
+		System.out.println("Hello For문");
+		System.out.println("Hello For문");
+		System.out.println("Hello For문");
+		System.out.println("Hello For문");
+		System.out.println("Hello For문");
+		System.out.println("Hello For문");
+		System.out.println("Hello For문");
+		System.out.println("Hello For문");
+		System.out.println("Hello For문");
+		System.out.println("==== for ====");
+		
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println("Hello For문");
+		}
+		System.out.println("==== for ====");
+		for(int i=0;i<10;i++) 				// 초기값은 꼭 1일 필요는 없음. 초기값은 바뀔 수 있는 것 유의
+		{
+			System.out.println("Hello For문");
+		}
+		System.out.println("==== for ====");
+		for(int i=10;i>=0;i--)				// 이런식으로 10부터 내림차순으로도 가능, 증감이 감소도 가능함 i--
+		{
+			System.out.println("Hello For문");
+		}
 	}
 
 }
