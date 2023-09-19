@@ -7,11 +7,11 @@ public class 문제7 {
 		{
 			if(i%3==0)
 			{
-				continue;
-			}
+				continue; // i++ 이동 (증가식으로 이동) // 제외할때는 continue
+			}  
 			else
 			{
-				System.out.print(i+" ");
+				System.out.print(i+" "); 
 			}
 		}
 	}
