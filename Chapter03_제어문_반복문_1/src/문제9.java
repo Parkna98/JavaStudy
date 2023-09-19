@@ -7,7 +7,7 @@ public class 문제9 {
 		
 		for(int i=100;i<=999;i++)
 		{
-			if(i%4==0)
+			if(i%4==0) // if(i%4!=0) 이렇게 쓰고 sum+=i; count++; 쓰면 else 안써도됨
 			{
 				continue;
 			}

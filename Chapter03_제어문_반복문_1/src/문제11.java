@@ -5,7 +5,7 @@ public class 문제11 {
 		// TODO Auto-generated method stub
 		for(int i=1;i<=100;i++)
 		{	
-			if(i%3==0)
+			if(i%3==0) // if(i%3==0 && i%5==0) 논리연산자쓰면 한번에 가능
 			{
 				if(i%5==0)
 				{
