@@ -19,10 +19,12 @@ public class 제어문_반복문_9 {
 		int com=(int)(Math.random()*100)+1;
 		// 종료 => break, System.exit(0)
 		Scanner scan=new Scanner(System.in);
+		int count=0;
 		for(;;) // 무한루프 ==> 종료문구 있어야함!! => break; System.exit(0);
 		{
 			System.out.print("1~100사이의 값 입력:");
 			int num=scan.nextInt();
+			count++;
 			if(num<1 || num>100)
 			{
 				System.out.println("잘못된 입력입니다!");
@@ -31,6 +33,7 @@ public class 제어문_반복문_9 {
 			else if(num==com) // 정답
 			{
 				System.out.println("정답입니다");
+				System.out.println("입력횟수:"+count);
 				System.exit(0); // 프로그램 종료
 			}
 			// hint
