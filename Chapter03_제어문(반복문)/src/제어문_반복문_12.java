@@ -13,7 +13,7 @@ public class 제어문_반복문_12 {
 			
 			if(i%2==0)
 			{
-				System.out.print(i+" ");
+				System.out.printf("%2d\t",i); // \t => 두칸씩 띄어서 출력, 3d면 세칸...
 			}
 			if(i%6==0)
 			{
