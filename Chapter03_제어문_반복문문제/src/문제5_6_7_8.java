@@ -31,7 +31,7 @@ public class 문제5_6_7_8 {
 		}
 		
 		for(int i=num1;i<=num2;i++) {
-			res*=i;
+			res*=i; // 곱이기 때문에 res=0이 아닌 res=1로 초기화!
 		}
 		System.out.println("결과는?"+res);
 		
