@@ -14,7 +14,18 @@
  * 				int b=20;
  * 				{
  * 					int c= 30;
- * 		}	}	}
+ * 				}
+ * 			}	
+ * 		}
+ * 
+ * 		중첩 for => 2차 for
+ * 		for(초기값;조건식;증감식)
+ * 		{
+ * 			for(초기값;조건식;증감식
+ * 			{
+ * 			
+ * 			}
+ * 		}
  * 			
  */
 public class 제어문_반복문_2 {
@@ -28,11 +39,21 @@ public class 제어문_반복문_2 {
 //			System.out.println(i);
 //		}
 //		int i=1;
-		for(int i=1;i<=100;i++)
-		{
+//		for(int i=1;i<=100;i++)
+		
 //			System.out.println(i);
 
+		for(int i=1;i<=4;i++) // 	  줄수
+		{
+			for(int j=1;j<=5-i;j++)// 실제 출력문 =
+			// => 이런한 공식, 구조알아야 알고리즘 배울 수 있다 => 코딩테스트
+			{
+				System.out.print("★");// 
+			}
+			System.out.println();
 		}
+		
+		
 	}
 
 }
