@@ -8,7 +8,7 @@ public class 문제13_14_15_16 {
 		char c='*';
 		for(int i=1;i<=5;i++) {
 			for(int j=1;j<=10;j++) {
-				System.out.print(c);
+				System.out.print(c); // 굳이 처음에 변수c 설정 하지 않아도됨 => System.out.print('*'); 바로 출력OK
 			}
 			System.out.println();
 		}

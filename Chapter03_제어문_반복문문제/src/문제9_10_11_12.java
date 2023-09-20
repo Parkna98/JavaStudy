@@ -45,7 +45,7 @@ public class 문제9_10_11_12 {
 						count3++;
 					}
 					if(num%5==0) {
-						count5++;
+						count5++; // 조회수 프로그램에 주로 사용
 					}
 				}
 				System.out.println("3의배수의개수는? "+count3);
