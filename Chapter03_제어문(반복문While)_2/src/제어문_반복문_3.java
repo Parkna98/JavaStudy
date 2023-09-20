@@ -7,13 +7,30 @@
  * 									-------------
  * 										기본형(데이터형)
  * 										참조형(사용자정의) : 배열, 클래스
- * 			=> 
+ * 			=> 기본형
+ * 			   정수
+ * 				byte(1byte)
+ * 				int(4byte)
+ * 				long(8byte)
+ * 				---------------------구분 L(l)
+ * 				100L (문자아니고 long형이다!)
+ * 				=> 컴퓨터가 인식하는 모든 숫자 int
+ * 			   실수
+ * 				double(8byte) => 15자리
+ * 			   문자
+ * 				char(2byte) => 0~65535
+ * 				----------- ASC vs Unicode (******) 차이점 꼭알기! 아스키: 제한적
+ * 																유니: 전세계모든언어 출력가능
+ * 			   논리
+ * 				boolean(1byte) => true/false만 저장이가능
+ * 
+ * 	// 코테의 기본 : 맨처음에 오류체크 먼저하고 들어가기
  */
 public class 제어문_반복문_3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		System.out.println(10000000000000L);
 	}
 
 }
