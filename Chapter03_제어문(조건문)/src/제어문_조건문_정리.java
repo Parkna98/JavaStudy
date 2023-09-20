@@ -152,24 +152,45 @@ public class 제어문_조건문_정리 {
 //				
 //			}
 		// 6. int형 변수 year가 400으로 나눠떨어지거나 또는 4로 나눠떨어지고 100으로 나눠떨어지지 않을 때 true인 조건식
-			int year=8;
-			if((year%400==0 || year%4==0) && year%100!=0)
-			{
-			}
+//			int year=8;
+//			if((year%400==0 || year%4==0) && year%100!=0)
+//			{
+//			}
 		// 7. boolean형 변수 powerOn이 false일 때 true인 조건식
-			boolean powerOn = false;
-			if(powerOn == false)
-			{
-				
-			}
+//			boolean powerOn = false;
+//			if(powerOn == false)
+//			{
+//				
+//			}
 		// 8. 문자열 참조변수 str이 "yes"일 때 true인 조건식
-			String str="";
-			if(str=="yes")
-			{
+//			String str="";
+//			if(str=="yes")
+//			{
+//				
+//			}
+			
+	// 4-2. 1부터 20까지의 정수 중에서 2 또는 3의 배수가 아닌 수의 총합을 구하시오.
+			int sum=0;
+			for(int i=1;i<=20;i++) {
+				if(i%2==0 || i%3==0) {
+					continue;
+				}
+				else {
+					sum+=i;
+				}
 				
 			}
 			
-	//4-2
+			System.out.println("1~20중에서 2또는 3의 배수가 아닌 수의 총합: "+sum);
+			System.out.println(1+5+7+11+13+17+19);
+	
+	// 4-3. 1+(1+2)+(1+2+3)+...+(1+2+3+...+10)
+			for(int i=1;i<=10;i++) {
+				
+			}
+			
 	}
 
 }
+
+
