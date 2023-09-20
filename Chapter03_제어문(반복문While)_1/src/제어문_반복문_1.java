@@ -35,8 +35,9 @@ public class 제어문_반복문_1 {
 		for(int i=1;i<=10;i++) {
 			System.out.print(i+" ");
 		}
-		System.out.println("\n===== while =====");
-		int i=1;
+		System.out.println("\n===== while ====="); // 디버깅(우측상단에 벌레모양) / 자바모드(J모양)
+												   // 디버깅 원하는 위치 왼쪽파란부분 더블클릭 => 파란점생김 => 화면에서 우클릭 => Debug As 
+		int i=1;								   // Java Application 하면 어떻게 실행되는지 알 수 있음 F6 누를 시 하나씩 볼 수 있음
 		while(i<=10) {
 			System.out.print(i+" ");
 			i++;
