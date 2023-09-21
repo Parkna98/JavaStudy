@@ -6,7 +6,7 @@ public class 문자열_3 {
 		// TODO Auto-generated method stub
 		Scanner scan=new Scanner(System.in);
 		System.out.print("문자열 입력:");
-		String data=scan.next();
+		String data=scan.next(); // next()는 공백전까지 받는 메소드 // 공백포함 받고싶다면 nextLine() 쓰면 문장전체 받음
 		
 		int count=0; // A || a 의 갯수
 		// charAt() => 문자를 한개씩 자르는 경우에 사용
