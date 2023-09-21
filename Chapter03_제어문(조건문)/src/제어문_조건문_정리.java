@@ -185,9 +185,56 @@ public class 제어문_조건문_정리 {
 			System.out.println(1+5+7+11+13+17+19);
 	
 	// 4-3. 1+(1+2)+(1+2+3)+...+(1+2+3+...+10)
+			int sum2=0;
 			for(int i=1;i<=10;i++) {
-				
+				for(int j=1;j<=i;j++) {
+					sum2+=j;
+				}
 			}
+			System.out.println("결과는? "+sum2);
+	
+	// 4-4. 1+(-2)+3+(-4)+... 총합이 100이상이 되는때?
+			int sum3=0;
+			int i=0;
+			while(true) {
+				if(i%2==0) {
+					sum3-=i;
+				}
+				if(i%2!=0) {
+					sum3+=i;
+				}
+				if(sum3>=100) {
+					System.out.printf("%d까지의 합은 %d",i,sum3);
+					break;
+				}
+				i++;
+			}
+			
+	// 4-5. 다음의 for문을 while문으로 변경하시오.
+			/*
+			 * 	public class Exercise4_5 {
+			 * 		public static void main(String[] args) {
+			 * 			for(int i=0;i<=10;i++) {
+			 * 				for(int j=0;j<=i;j++)
+			 * 					System.out.print("*");
+			 * 				System.out.println();
+			 * 			}
+			 * 		}
+			 * 	}
+			 *  
+			 *  ===>
+			 */
+				System.out.println();
+				int k=0, t=0;
+				while(k<=10) {
+					while(t<=k) {
+						System.out.print("*");
+						t++;
+					}
+					System.out.println();
+					k++;
+					
+				}
 			
 	}
 
