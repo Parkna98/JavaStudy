@@ -13,7 +13,7 @@ public class 문제5_6_7 {
 			sum+=num;
 		}
 		avg=sum/10.0;
-		System.out.printf("\n평균:%.2f",avg);
+		System.out.printf("\n평균:%.1f",avg);
 		System.out.println();
 		
 		// 5-1. while
@@ -27,7 +27,7 @@ public class 문제5_6_7 {
 			i++;
 		}
 		avg2=sum2/10.0;
-		System.out.printf("\n평균:%.2f",avg2);
+		System.out.printf("\n평균:%.1f",avg2);
 		System.out.println();
 		
 		// 5-2. do~while
@@ -41,7 +41,7 @@ public class 문제5_6_7 {
 			i2++;
 		} while(i2<=10);
 		avg3=sum3/10.0;
-		System.out.printf("\n평균:%.2f",avg3);
+		System.out.printf("\n평균:%.1f",avg3);
 		System.out.println();
 		
 		
@@ -70,7 +70,7 @@ public class 문제5_6_7 {
 				System.out.println("종료");
 				break;
 			}
-			}
+			} 
 		
 	}
 
