@@ -98,14 +98,17 @@
  * 			-------------------------------------
  * 				
  */
-
+import java.util.*;
 import java.io.*;
 public class 변수정리 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		File file=new File("");
-		long len=file.length(); // 파일크기는 long형으로 받기때문에 int로 받으면 Error 남
+//		File file=new File("");
+//		long len=file.length(); // 파일크기는 long형으로 받기때문에 int로 받으면 Error 남
+//		List list=new ArrayList();
+//		list.add(10);
+//		int a=(int)list.
 	}
 
 }
