@@ -1,9 +1,8 @@
 import java.util.Scanner;
-public class 배열_생성_1 {
+public class 배열생성국영수 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		배열_생성.print(7); // 메소드 불러옴 
 		int[] kor=new int[3]; // int kor1,kor2,kor3 // int[3]은 3크기를 갖는 int배열 
 		int[] eng=new int[3];
 		int[] math=new int[3];
@@ -27,9 +26,8 @@ public class 배열_생성_1 {
 			
 		}
 		for(int i=0;i<3;i++){
-		System.out.printf("%-5d%-5d%-5d%-7d%.2f\n",kor[i],eng[i],math[i],total[i],avg[i]/3.0);
+		System.out.printf("%-5d%-5d%-5d%-7d%-5.2f\n",kor[i],eng[i],math[i],total[i],avg[i]/3.0);
 		}
-		
 	}
 
 }
