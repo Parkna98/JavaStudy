@@ -5,7 +5,7 @@ public class 배열_생성_1 {
 		// TODO Auto-generated method stub
 //		배열_생성.print(7); // 메소드 불러옴 
 		int[] kor=new int[3]; // int kor1,kor2,kor3 // int[3]은 3크기를 갖는 int배열 
-		int[] eng=new int[3];
+		int[] eng=new int[3]; // 국,영,수 다 int지만 종류대로 국어끼리 수학끼리 영어끼리 모아야함. (배열)
 		int[] math=new int[3];
 		int[] total=new int[3];
 		double[] avg=new double[3];
