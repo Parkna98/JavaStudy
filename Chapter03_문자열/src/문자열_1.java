@@ -31,6 +31,14 @@ public class 문자열_1 {
 		String find=scan.next(); // String으로 받아오기 => next()와 nextLine()의 차이는?
 		System.out.println(find);
 		
+		
+		String region="부산";
+		System.out.println(region);
+		
+		Scanner scan2=new Scanner(System.in);
+		System.out.println("검색하고싶은 지역:");
+		String find2=scan2.nextLine();
+		System.out.println(find2);
 	}
 
 }

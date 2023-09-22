@@ -22,7 +22,13 @@ public class 문자열_5 {
 			}
 			System.out.print(bin[i]);
 		} */
-				
+
+		int[] bin2=new int[16];
+		int index2=15;
+		Scanner scan2=new Scanner(System.in);
+		System.out.println("정수 입력");
+		int num2=scan.nextInt();
+		System.out.println(Integer.toHexString(num2));
 	}
 
 }

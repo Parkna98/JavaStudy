@@ -20,6 +20,8 @@ public class 문자열_4 {
 			
 		System.out.println(s.toLowerCase()); // 소문자변경
 		
+		String name="JASON";
+		System.out.println(name.toLowerCase());
 	}
 
 }

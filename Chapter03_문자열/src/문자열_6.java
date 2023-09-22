@@ -22,6 +22,7 @@ public class 문자열_6 {
 		System.out.println(ss);
 		ss=s.replace("Java","Python"); //문자열 변경 Java → Python 
 		System.out.println(ss);
+		
 	}	
 
 }
