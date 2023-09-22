@@ -24,9 +24,9 @@
  */
 
 public class 배열_생성 {
-	public static void print(int dan)
+	public static void print(int dan) //메소드 만들기 (main에 만들기는 불가)
 	{
-		for(int i=1;i<=9;i++)
+		for(int i=1;i<=9;i++) // 명령문
 		{
 			System.out.println(dan+"*"+i+"="+(dan*i)); // 메소드 : 구구단을 출력하는 기능
 		}
