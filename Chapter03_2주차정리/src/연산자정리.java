@@ -17,8 +17,8 @@
  *			
  *					= 부정연산자 ==> boolean 사용 (조건문)
  *					  String s="aaa";
- *					  s.replace('a','b') ==> 'bbb'
- *				  	  s='aaa' 
+ *					  s.replace('a','b') ==> "bbb"
+ *				  	  s="aaa" 
  *					
  *					= 형변환연산자	
  *					  --------- boolean 생략
