@@ -13,7 +13,7 @@ public class 배열_11 {
 		System.out.println("===== 정렬(ASC:오름차순) =====");
 		Arrays.sort(arr); // 오름차순 정렬
 		System.out.println(Arrays.toString(arr));
-		
+		// ORDER BY no DESC(ASC) (오라클)
 		System.out.println("===== 정렬(DESC:내림차순) =====");
 		for(int i=arr.length-1;i>=0;i--) {
 			System.out.print(arr[i]+" ");
