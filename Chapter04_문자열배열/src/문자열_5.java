@@ -23,6 +23,14 @@ public class 문자열_5 {
 		System.out.println(s.replace("Java", "Oracle"));
 		System.out.println(s); // 저장하지않고 출력만했기 때문에 s는 그대로
 		System.out.println(s=s.replace("Java", "Oracle")); //출력문 안에서도 저장 가능 => s 변경
+		
+		// 문자열결합
+		String msg="나라가 독립을 했으면 당연히 우리 기록도 독립이 되어야지!";
+		if(msg.length()>20) {
+			//msg=msg.substring(0,20)+"..."; // 문자열 결합을 이용한 문자열 자르기
+			msg=msg.substring(0,20).concat("..."); // concat을 활용한 문자열 결합 
+		}										   // 주로 "+"를 많이써서 concat은 잘 안씀
+		System.out.println(msg); 
 	}
 
 }
