@@ -52,21 +52,23 @@ public class 배열연습 {
 //		}
 		
 		// 간단하게 짜는 중복없는 난수
-		int[] arr=new int[10];
-		for(int i=0;i<arr.length;i++) {
-			arr[i]=(int)(Math.random()*10)+1;
-			for(int j=0;j<i;j++) {
-				if(arr[i]==arr[j]) {
-					i--; // 중복되면 1차 for문으로 돌아가게 만듬
-					break; // if문과는 상관없는 break
-				}
-			}
-		}
-		for(int a:arr) {
-			System.out.print(a+" ");
-		}
-		
-		
+//		int[] arr=new int[10];
+//		for(int i=0;i<arr.length;i++) {
+//			arr[i]=(int)(Math.random()*10)+1;
+//			for(int j=0;j<i;j++) {
+//				if(arr[i]==arr[j]) {
+//					i--; // 중복되면 1차 for문으로 돌아가게 만듬
+//					break; // if문과는 상관없는 break
+//				}
+//			}
+//		}
+//		for(int a:arr) {
+//			System.out.print(a+" ");
+//		}
+		String str1="abc";
+		String str2="abc";
+		String str3=new String("abc");
+		System.out.println(str1.equals(str3));
 	}
 
 }
