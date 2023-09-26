@@ -51,13 +51,35 @@
  *  			     -- --
  *  		 		 40 50
  *  		----------------
+ *  		10 20 30 40 50
  *  
  */
+import java.util.*;
 public class 배열_3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		// 선택정렬 (select sort)
+		int[] arr=new int[5];
+		// 초기화
+		for(int i=0;i<arr.length;i++) {
+			arr[i]=(int)(Math.random()*100)+1;
+		}
+		System.out.println("=========== 정렬전 ============");
+		System.out.println(Arrays.toString(arr));
+		for(int i=0;i<arr.length-1;i++) {
+			for(int j=i+1;j<arr.length;j++) {
+				if(arr[i]>arr[j]) {
+					int temp=arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+				}
+			}
+			System.out.println("===== "+(i+1)+" Round=====");
+			System.out.println(Arrays.toString(arr));
+		}
+		System.out.println("=========== 정렬후 ============");
+		System.out.println(Arrays.toString(arr));
 	}
 
 }
