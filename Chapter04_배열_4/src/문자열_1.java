@@ -106,14 +106,71 @@
  * 	---------------------------------------------------------------------
  * 		   
  */
+import java.util.Scanner;
 public class 문자열_1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		문자열_1 a=new 문자열_1();
-		// 클래스 저장
-		System.out.println(a.toString()); // toString()생략가능, 아래와 결과값 같음 
-		System.out.println(a); // 원시값(주소값) 출력
+//		문자열_1 a=new 문자열_1();
+//		// 클래스 저장
+//		System.out.println(a.toString()); // toString()생략가능, 아래와 결과값 같음 
+//		System.out.println(a); // 원시값(주소값) 출력
+		String[] names= {"홍길동","박문수","심청이","이순신","강감찬"};
+		// String은 문자저장이 제한이 없다
+		/*
+		 * 	Stack		Heap(실제 저장되는 위치)
+		 * 	names		names[0] names[1] names[2] names[3] names[4]		
+		 * 	------		----------------------------------
+		 * 	 100		"홍길동" | "박문수" | "심청이" | "이순신" | "강감찬"
+		 * 	------		|----------------------------------
+		 * 			메모리 주소(100)
+		 * 	
+		 * 	1. 선언
+		 * 		데이터형[] 배열명;
+		 * 		데이터형 배열명[];
+		 * 	2. 초기값
+		 * 		데이터형[] 배열명={}
+		 * 		데이터형[] 배열명=new 데이터형[갯수]
+		 * 		배열명[0]=""
+		 * 		for문
+		 * 		난수발생
+		 * 		... 
+		 * 	3. 활용 / 변경,출력
+		 * 				--- for-each
+		 * 		배열명[0]="" => 변경 	
+		 */
+		// 출력
+		for(String name:names)	// 실제 저장된 값만을 가져옴 
+		{
+			System.out.print(name+" ");
+		} // => 속도가 빠르다
+		// 인덱스를 이용한 출력
+		System.out.println("\n========================");
+		for(int i=0;i<names.length;i++) {
+			System.out.print(names[i]+" ");
+		}
+		System.out.println("\n========================");
+		Scanner scan=new Scanner(System.in);
+		System.out.print("이름 입력:"); // 검색
+		String name=scan.next();
+		int index=0;
+		/*for(String n:names) {
+			if(n.equals(name)) {
+				break;
+			}
+			index++;
+		}*/
+		for(int i=0;i<names.length;i++) {
+			if(names[i].equals(name)) {
+				index=i;
+				break;
+			}
+		}
+		System.out.println(name+"는(은) "+(index+1)+"번째에 있습니다."); // 배열이라 indexOf못씀 String메소드임
+		
+		
+		
+		
 	}	
 
 }
