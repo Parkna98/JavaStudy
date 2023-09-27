@@ -4,7 +4,7 @@ public class 배열_달력 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// 변수 선언 => year, month => 입력 ===> 메소드
-		int year,month;
+		/*int year,month;
 		Scanner scan=new Scanner(System.in);
 		System.out.print("년도 입력:");
 		year=scan.nextInt();
@@ -58,7 +58,45 @@ public class 배열_달력 {
 					week=0;
 					System.out.println();
 				}
-			}
+			}*/
+		
+		// 달력만들기
+		// 변수선언
+		int year,month;
+		Scanner scan=new Scanner(System.in);
+		System.out.println("년도 입력:");  // 년도 입력
+		year = scan.nextInt(); 
+		
+		System.out.println("월 입력:");
+		month = scan.nextInt();
+		
+		int total = (year-1)*365
+				+ (year-1)/4
+				- (year-1/100)
+				+ (year-1/400);
+		
+		int[] lastday= {31,28,31,30,31,30,31,31,30,31,30,31}; // 각 달의 마지막 날
+		// 2월 조건
+		if((year%4==0 && year%100!=0) || year%400==0 ) {
+			lastday[1]=29;
+		}
+		else lastday[1]=28;
+		
+		total++; // 
+		
+		int week=total%7;
+		int[] strWeek= {'일','월','화','수','목','금','토'};
+		
+		// xxxx년 xx월 출력
+		System.out.println(year+"년 "+month+"월 ");
+		System.out.println();
+		
+		// 달력 출력
+		for(int i=0;i<strWeek.length;i++) {
+			System.out.println(strWeek[i]+"\t");
+		}
+		System.out.println();
+		
 		}
 		
 	}
