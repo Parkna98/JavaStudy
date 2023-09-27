@@ -247,7 +247,17 @@ public class 문자열_4 {
 				}
 			}
 			System.out.println("임영웅의 곡은 총 "+count+"곡입니다");
+			System.out.println("====================================================================================================");
 			
+			// 검색어를 입력받아서 => 검색어가 포함되어있는 노래명을 출력
+			Scanner scan2=new Scanner(System.in);
+			System.out.print("검색어 입력:");
+			String ss=scan2.next();
+			for(String s:title) {
+				if(s.contains(ss)) {
+					System.out.println(s);
+				}
+			}
 	}
 
 }
