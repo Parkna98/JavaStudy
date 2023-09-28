@@ -22,6 +22,8 @@ public class 문제5 {
 		{
 			System.out.println(num+"는(은) 0입니다");
 		}
+		
+//		System.out.println((num==0)?"0":(num>0?"양수":"짝수"));
+		// 삼항연산자를 2번쓰면 한줄로 코딩 가능
 	}
-
 }
