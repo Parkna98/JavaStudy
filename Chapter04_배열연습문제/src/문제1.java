@@ -6,7 +6,7 @@ public class 문제1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr=new int[5];
+		/*int[] arr=new int[5];
 		int[] rank=new int[5];
 		for(int i=0;i<arr.length;i++) {
 			arr[i]=(int)(Math.random()*100)+1;
@@ -22,6 +22,24 @@ public class 문제1 {
 			}
 		}
 		System.out.println(Arrays.toString(arr));
+		System.out.println(Arrays.toString(rank));*/
+		
+		int[] kor=new int[5];
+		int[] rank=new int[5];
+		// 난수 생성
+		for(int i=0;i<kor.length;i++) {
+			kor[i]=(int)(Math.random()*50)+50;
+		}
+		// 등수 출력 => 등수1로 설정하고 그뒤의 점수와 비교하면서 더큰값이 있을 경우 +1
+		for(int i=0;i<rank.length;i++) {
+			rank[i]=1;
+			for(int j=0;j<rank.length;j++) {
+				if(kor[j]>kor[i]) {
+					rank[i]++;
+				}
+			}
+		}
+		System.out.println(Arrays.toString(kor));
 		System.out.println(Arrays.toString(rank));
 	}
 

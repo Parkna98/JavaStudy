@@ -4,7 +4,7 @@ public class 문제2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr=new int[10];
+		/*int[] arr=new int[10];
 		// 임의의 정수 생성
 		for(int i=0;i<arr.length;i++) {
 			arr[i]=(int)(Math.random()*100)+1;
@@ -18,7 +18,23 @@ public class 문제2 {
 			if(arr[i]>max) max=arr[i];
 			if(arr[i]<min) min=arr[i];
 		}
-		System.out.println("최댓값:"+max+" ,최솟값: "+min);
+		System.out.println("최댓값:"+max+" ,최솟값: "+min);*/
+		
+		int[] arr=new int[10];
+		int max=0;
+		int min=100;
+		// 난수 생성
+		for(int i=0;i<arr.length;i++) {
+			arr[i]=(int)(Math.random()*100)+1;
+		}
+		// 최대/최소 출력
+		for(int i:arr) {
+			if(i>max) max=i;
+			if(i<min) min=i;
+		}
+		System.out.println(Arrays.toString(arr));
+		System.out.println("최댓값:"+max);
+		System.out.println("최솟값:"+min);
 	}
 
 }
