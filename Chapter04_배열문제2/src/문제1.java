@@ -42,9 +42,10 @@ public class 문제1 {
 					rank[i]++;
 				}
 		}
+		
 		// 결과출력
 		for(int i=0;i<kor.length;i++) {
-			System.out.println(kor[i]+" "+rank[i]);
+			System.out.println(kor[i]+" "+rank[i]); 
 		}
 	}
 
