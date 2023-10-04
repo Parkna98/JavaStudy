@@ -21,13 +21,12 @@ public class 메소드_7 {
 			bCheck=true;
 			// return true;
 		}
-		// else bCheck=false; 앞에 default값으로 false설정해서 생략가능
+		 else bCheck=false; //앞에 default값으로 false설정해서 생략가능
 		
 		return bCheck;
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	static void process() {
 		String id=userInput("아이디");
 		String pwd=userInput("비밀번호");
 		boolean bCheck=isLogin(id,pwd);
@@ -35,9 +34,13 @@ public class 메소드_7 {
 		// isXxxxx => 리턴형이 boolean
 		// 처리
 		if(bCheck==true)
-			System.out.println("메인 화면으로 이동...(response.sendRedirect('main.jsp')");
+			System.out.println("메인 화면으로 이동...(response.sendRedirect('main.jsp'))");
 		else
 			System.out.println("ID나 비밀번호가 틀립니다..(history.back())");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		process();
 		
 	}
 
