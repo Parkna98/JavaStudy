@@ -21,6 +21,7 @@ public class 문제_9_윤년 {
 		return bCheck?"윤년입니다":"윤년이 아닙니다";
 	}
 	
+	
 	// 출력
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

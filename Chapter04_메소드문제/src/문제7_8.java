@@ -27,13 +27,20 @@ public class 문제7_8 {
 	}
 	
 	// 거꾸로 출력
-	static void alphaRev(String msg) {
+	/* static void alphaRev(String msg) {
 		String res="";
 		for(int i=msg.length()-1;i>=0;i--){
 			res+=msg.charAt(i);
 		}
 		System.out.print(res);
+	}*/
+	
+	static void alphaRev(StringBuffer msg) {
+		String res=msg.reverse().toString();
+		System.out.println(res);
 	}
+	
+	
 	
 	
 	public static void main(String[] args) {
@@ -42,7 +49,8 @@ public class 문제7_8 {
 		System.out.println("소문자를 대문자로 출력");
 		alphaChange(alpha);
 		System.out.println("\n거꾸로 출력");
-		alphaRev(alpha);
+		StringBuffer sb=new StringBuffer(alpha);
+		alphaRev(sb);
 	}
 
 }
