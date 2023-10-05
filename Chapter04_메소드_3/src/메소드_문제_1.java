@@ -10,7 +10,7 @@ public class 메소드_문제_1 {
 		int number=scan.nextInt();
 		return number;  // 넘기지 않아도 할수있는방법 : 전역변수 (클래스에서 변수선언)
 	}
-	
+	// 앱
 	// 홀짝 판별
 	static String result(int number) {
 		String res="";
@@ -18,6 +18,9 @@ public class 메소드_문제_1 {
 			res = "짝수"; // boolean으로 잡아도되지만 출력할때 또 조건문 써야하므로 그냥 String으로 리턴값줌
 		else
 			res = "홀수";
+		
+		// return 삼항연산자
+		
 		return res;
 	}
 	
