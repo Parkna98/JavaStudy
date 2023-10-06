@@ -70,6 +70,9 @@ public class 메소드_5 {
 		System.out.println("min="+min);*/
 		
 		process();
+		
+		
+	
 	}
 
 }

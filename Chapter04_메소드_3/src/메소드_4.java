@@ -3,7 +3,7 @@
 import java.util.Arrays;
 public class 메소드_4 {
 	
-	// 중복없는 난수
+/*	// 중복없는 난수
 	static int[] getRand(int count) {
 		int[] lotto=new int[count];
 		for(int i=0;i<lotto.length;i++) {
@@ -25,12 +25,40 @@ public class 메소드_4 {
 		}
 	}
 	
+*/	
+	
+	// 로또 => 6개의 정수를 중복없이 추출(1~45) => 출력
+	// 1. 6개정수를 중복없이 추출
+	// 2. 출력
+	
+	// 중복없는난수(count갯수만큼 추출)
+	static int[] lotto(int count) {
+		int[] lo=new int[count];
+		for(int i=0;i<lo.length;i++) {
+			lo[i]=(int)(Math.random()*45)+1;
+		}
+		return lo;
+	}
+	
+	// 출력
+	static void print(int[] lotto) {
+		System.out.println(Arrays.toString(lotto));
+	}
+	
+	// 조립
+	static void process() {
+		print(lotto(6));
+		
+	}
+	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] lotto=getRand(10);
-		print(lotto);
+		process();
 		
+		/* int[] lotto=getRand(10);
+		print(lotto);
+		*/
 	}
 
 }

@@ -3,7 +3,7 @@
 
 import java.util.*;
 public class 메소드_문제_6 {
-
+/*
 	// 랜덤 추출
 	static int rand() {
 		int com=(int)(Math.random()*100)+1;
@@ -15,7 +15,7 @@ public class 메소드_문제_6 {
 		Scanner scan=new Scanner(System.in);
 		System.out.print("정수 입력(1~100):");
 		return scan.nextInt();
-	}
+	} /*
 	
 	// 힌트
 	/*static void hint(int user, int com) {
@@ -34,7 +34,7 @@ public class 메소드_문제_6 {
 			}
 		}	
 	}*/
-	
+	/*
 	// 힌트
 	static String hint2(int user, int com) {
 			String res="";
@@ -49,7 +49,9 @@ public class 메소드_문제_6 {
 			}
 			return res;
 		}	
+	*/
 	
+	/*
 	// process()에 while문을 돌리는 것도 방법
 	// while문은 밖에서 돌려야한다
 	static void process() {
@@ -73,17 +75,66 @@ public class 메소드_문제_6 {
 			}
 		}
 	}
-	
+*/
 	// process()
 //	static void process() {
 //		int com=rand();
 //		hint(userInput(),com);
 //	}
 	
+	// updown게임
+	// 1. 난수추출
+	// 2. 사용자입력받기
+	// 3. updown 힌트 (힌트에 루프문을 넣을순있지만 재사용성에 비춰보면 비효율적)
+	// 4. 조립(루프문)
+	
+	// 난수추출
+	static int com() {
+		int rand=(int)(Math.random()*100)+1;
+		return rand;
+	}
+	
+	// 사용자입력
+	static int user() {
+		Scanner scan=new Scanner(System.in);
+		System.out.println("정수 입력(1~100):");
+		return scan.nextInt();
+	}
+	
+	// 힌트
+	static String hint(int user,int com) {
+		String res="";
+		if(user>com)
+			res="더 작은 값을 입력하세요";
+		else if(user<com)
+			res="더 큰 값을 입력하세요";
+		else
+			res="정답!!! 게임 종료!!";
+		
+		return res;
+		
+	}
+	
+	// 조립
+	static void process() {
+		int com=com();
+		while(true) {
+			int user=user();
+			String res = hint(user,com);
+//			if(res.contains("정답")) {
+//				System.out.println(res);
+//				Scanner scan2=new Scanner(System.in);
+//				System.out.println("게임을 다시 시작하시겠습니까(Y|y):");
+//				char h=scan2.next().charAt(0);
+//				
+//				
+//			}
+		}
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		process();
+		//process();
 		
 		// 컴퓨터가 숫자 추출
 		/*int com=(int)(Math.random()*100)+1;
