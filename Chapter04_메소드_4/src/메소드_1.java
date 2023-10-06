@@ -150,11 +150,51 @@
  * 				파일에 값 추가, 파일 값 삭제, 수정
  * 			
  */
-public class 메소드_1 {
+// => 모든 프로그램
+/*
+ * 		입력 : 사용자로부터 전송 ==> 매개변수
+ * 				=> Scanner, BufferedReader, Random
+ * 							--------------
+ * 							ㅣ 예외처리, io (throws Exception)(try~catch)
+ * 				=> 윈도우, 웹 => 입력창 => 버튼 / 엔터
+ * 				   --------
+ * 					<input type=text>
+ * 					<input type=password>
+ * 					<input type=button> => 로그인창 만들기
+ * 		처리 (요청 처리) => 결과값, 결과값이 없는 경우 => 여러개로 나눠서 처리
+ * 						----  -------------
+ * 						 ㅣ				
+ * 					출력하는 메소드필요
+ */
+// 1. 매개변수(X), 리턴형(X) ==> 자체출력
+// ==> 리턴형이 없는 경우가 많이 존재 => 전역변수 (처리하고 전역변수에 저장해버리면 리턴값 받을필요가 없음)
+//								=> 클래스에서 전역변수 지정하면 리턴값없이 다른메소드에서 쓸수있음
 
+public class 메소드_1 {
+	
+	/*static int a=10;
+	static void aaa() {
+		a=100;
+	}*/
+	
+	// 매개변수x 리턴형x 
+	// 구구단 전체
+	static void gugudan() {
+		for(int i=1;i<=9;i++) {
+			for(int j=2;j<=9;j++) {
+				// 실제 출력 위치
+				System.out.printf("%2d*%2d=%2d\t",j,i,j*i);
+			}
+			System.out.println();
+		}
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+//		aaa(); // a를 전역변수로 지정해놓았기 때문에 메소드에서 요청처리후에도 a값이 요청대로 바뀜
+//		System.out.println("a="+a); // 전역변수 이용
+		// 								<==> 지역변수는 처리후 메모리에서 없어지기때문에 a값은 변하지않는다 
+		gugudan();
 	}
 
 }
