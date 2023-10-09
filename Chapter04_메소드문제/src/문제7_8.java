@@ -40,17 +40,32 @@ public class 문제7_8 {
 		System.out.println(res);
 	}
 	
+	// 문자열의 소문자를 대문자로 바꿔주는 메소드
 	
+	// 입력
+	static String userInput() {
+		Scanner scanner=new Scanner(System.in);
+		System.out.print("문자열 입력:");
+		return scanner.next();
+	}
 	
+	// 소문자를 대문자로
+	static String toUpper(String input) {
+		return input.toUpperCase();
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String alpha=input();
+		/* String alpha=input();
 		System.out.println("소문자를 대문자로 출력");
 		alphaChange(alpha);
 		System.out.println("\n거꾸로 출력");
 		StringBuffer sb=new StringBuffer(alpha);
-		alphaRev(sb);
+		alphaRev(sb); */
+		
+		String input=userInput();
+		System.out.println("변경전:"+input);
+		System.out.println("변경후:"+toUpper(input));
 	}
 
 }
