@@ -19,7 +19,7 @@ public class 기본알고리즘_연습문제_1 {
 			System.out.println();  
 		}
 	}
-	
+	 
 	static void triangleRU(int n) {
 		for(int i=1;i<=n;i++) {
 			for(int j=1;j<i;j++)
