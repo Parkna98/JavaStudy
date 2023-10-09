@@ -16,7 +16,7 @@ public class 기본알고리즘_연습문제_1 {
 		for(int i=1;i<=n;i++) {
 			for(int j=n;j>=i;j--) 
 				System.out.print('*');
-			System.out.println(); 
+			System.out.println();  
 		}
 	}
 	
