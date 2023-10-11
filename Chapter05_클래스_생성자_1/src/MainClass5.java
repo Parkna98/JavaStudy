@@ -16,7 +16,7 @@ class Join{
 }
 
 class JoinSystem{
-	static Join[] member=new Join[5];
+	static Join[] member=new Join[5]; // 5명의 데이터를 받겠는다는 의미
 	// 값을 받아서 넣어줘야하기때문에 생성자 필요(위의 데이터형클래스에서 생성자 만듬)
 	// static은 객체 생성시마다 동일한 메모리 사용
 }
@@ -27,7 +27,7 @@ public class MainClass5 {
 		// TODO Auto-generated method stub
 		JoinSystem js1=new JoinSystem(); // => member
 		
-		Join j=new Join(1,"홍길동","서울","010-1111-1111");
+		Join j=new Join(1,"홍길동","서울","010-1111-1111"); // 홍길동의 Join클래스의 멤버변수값을 저장할 메모리공간 생성 
 		js1.member[0]=j;
 		// {j,null,null,null,null}
 		for(int i=0;i<js1.member.length;i++) {
