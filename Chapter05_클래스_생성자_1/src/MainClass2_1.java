@@ -27,6 +27,7 @@ class StdSystem{
 	StdSystem() {
 		Scanner scan=new Scanner(System.in);
 		for(int i=0;i<stds.length;i++) {
+			stds[i]=new Std();
 			System.out.println((i+1)+"번째 이름 입력:");
 			stds[i].name=scan.next();
 			System.out.println((i+1)+"번째 국어 입력:");
