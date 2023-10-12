@@ -38,7 +38,7 @@ class MusicData{
 			i=0; // 0으로 초기화 안해주면 앞에서 i=-1이 된상태로 저장되서 오류남 
 			for(String s:datas) {
 				String[] ss=s.split("\\|"); // 데이터를 "|"를 기준으로 자름
-				musics[i]=new Music();
+				musics[i]=new Music(); 
 				//if(ss[0].equals("47"))
 				//	continue;
 				musics[i].rank=ss[0];
