@@ -24,7 +24,7 @@ public class 문제1 {
 		System.out.println(Arrays.toString(arr));
 		System.out.println(Arrays.toString(rank));*/
 		
-		int[] kor=new int[5];
+		/*int[] kor=new int[5];
 		int[] rank=new int[5];
 		// 난수 생성
 		for(int i=0;i<kor.length;i++) {
@@ -35,12 +35,23 @@ public class 문제1 {
 			rank[i]=1;
 			for(int j=0;j<rank.length;j++) {
 				if(kor[j]>kor[i]) {
-					rank[i]++;
+					rank[i]++; 
 				}
 			}
 		}
 		System.out.println(Arrays.toString(kor));
-		System.out.println(Arrays.toString(rank));
+		System.out.println(Arrays.toString(rank));*/
+		String my_string="apporoograpemmemprs";
+		int[] indices= {1, 16, 6, 15, 0, 10, 11, 3};
+		String answer = "";
+        String[] str=my_string.split("");
+        System.out.println(Arrays.toString(str));
+        for(int i:indices){
+            str[i]="";
+        }
+        System.out.println(Arrays.toString(str));
+        answer=String.join("",str);
+        System.out.println(answer);
 	}
 
 }
