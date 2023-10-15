@@ -26,7 +26,7 @@ public class MainClass5 {
 		Member m=new Member(); // m(age,name)
 		// 값 저장
 		m.setAge(20); // m.age 
-		m.setName("홍길동"); // m.name
+		m.setName("홍길동"); // m.name 
 		
 		System.out.println(m.getAge());
 		System.out.println(m.getName());
