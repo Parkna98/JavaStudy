@@ -35,7 +35,7 @@ public class 문제1 {
 			rank[i]=1;
 			for(int j=0;j<rank.length;j++) {
 				if(kor[j]>kor[i]) {
-					rank[i]++;
+					rank[i]++; 
 				}
 			}
 		}
