@@ -149,11 +149,26 @@ class Sub extends Super{
 		display(); // 상속받아서 가져다 쓸수있음
 	}
 }
+
+class Parents{
+	int mom=2,dad=2;
+	void display() {}
+}
+class Son extends Parents{
+	void dd() {
+		int brother=2;
+		int mom=1;
+		dad=1;
+		System.out.println("mom:"+mom);
+		System.out.println("dad:"+dad);
+	}
+}
 public class MainClass { // extends Object가 생략되어있음 (클래스파일 생성할때 superclass에 java.lang.Object써있음)
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		Son son=new Son();
+		son.dd();
 	}
 
 }

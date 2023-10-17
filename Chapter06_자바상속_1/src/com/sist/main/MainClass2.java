@@ -23,18 +23,18 @@ public class MainClass2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		A a=new A(); // B클래스(하위)에 있는 변수, 메소드 사용불가
-		System.out.println("a=>"+a.a);
-		System.out.println("b=>"+a.b);
+		System.out.println("a=>"+a.a); // 10
+		System.out.println("b=>"+a.b); // 20
 		a.aaa();
 		//System.out.println("c=>"+a.c); // Error! (상위클래스는 하위클래스것을 사용불가)
 		//System.out.println("d=>"+a.d); // Error! 
 		
 		B b=new B(); // 하위클래스는 상위클래스(A)의 모든 것 사용가능
 		// b => a,b,c,d,aaa(),bbb()
-		System.out.println("a=>"+b.a);
-		System.out.println("b=>"+b.b);
-		System.out.println("c=>"+b.c);
-		System.out.println("d=>"+b.d);
+		System.out.println("a=>"+b.a); // 100
+		System.out.println("b=>"+b.b); // 200
+		System.out.println("c=>"+b.c); 
+		System.out.println("d=>"+b.d); 
 		b.aaa();
 		b.bbb();
 		// A  >  B => 클래스의 크기 ==> 범위(상속을 내린 클래스가 크다)
@@ -48,7 +48,7 @@ public class MainClass2 {
 		System.out.println("aa.b=>"+aa.b); // 20
 		//System.out.println("aa.c=>"+aa.c); // Error!
 		//System.out.println("aa.d=>"+aa.d); //
-		aa.aaa(); // B의 메소드**
+		aa.aaa(); // B의 메소드** (오버라이딩된 메소드 가져오는것으로 생각)
 		//aa.bbb(); ==> Error!
 		
 		// *********
@@ -124,7 +124,7 @@ public class MainClass2 {
 		 * 			=> A a=new B(); ==> 변수는 A(상위)클래스 것 사용 
 		 * 								메소드는 생성자(B())것 사용
 		 * 			=> A bb=new B();
-		 * 			   A cc=(B)bb;  ==> 생성이 되어있어야(생성자가있어야) 형변환이 가능하다
+		 * 			   B cc=(B)bb;  ==> 생성이 되어있어야(생성자가있어야) 형변환이 가능하다
 		 * 
 		 * 			class 동물
 		 * 			class 사람 extends 동물
@@ -139,7 +139,7 @@ public class MainClass2 {
 		 * 			ani=new 소();
 		 */
 		A bbb=new B();
-		A ccc=(B)bbb;
+		B ccc=(B)bbb;
 	}
 
 }
