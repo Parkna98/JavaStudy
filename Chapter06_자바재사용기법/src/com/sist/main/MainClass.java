@@ -23,7 +23,7 @@ package com.sist.main;
  * 		}
  * 		
  * 		A ? B (크기비교 불가)
- * 		
+ * 		   
  * 		class A
  * 		{
  * 		}
