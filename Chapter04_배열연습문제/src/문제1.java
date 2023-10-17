@@ -17,7 +17,7 @@ public class 문제1 {
 			rank[i]=1;
 			for(int j=0;j<rank.length;j++) {
 				if(arr[j]>arr[i]) {
-					rank[i]++;
+					rank[i]++;   
 				}
 			}
 		}
