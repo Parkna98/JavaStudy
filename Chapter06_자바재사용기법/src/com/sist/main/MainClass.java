@@ -42,7 +42,7 @@ package com.sist.main;
  * 			침엽수		활엽수 
  * 		-------------------------------
  * 		class A
- * 		class B
+ * 		class B 
  * 		{
  * 			A a;
  * 		}
