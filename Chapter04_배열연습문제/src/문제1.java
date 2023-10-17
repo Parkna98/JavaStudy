@@ -17,13 +17,13 @@ public class 문제1 {
 			rank[i]=1;
 			for(int j=0;j<rank.length;j++) {
 				if(arr[j]>arr[i]) {
-					rank[i]++;
+					rank[i]++;   
 				}
 			}
 		}
 		System.out.println(Arrays.toString(arr));
 		System.out.println(Arrays.toString(rank));*/
-		
+		 
 		/*int[] kor=new int[5];
 		int[] rank=new int[5];
 		// 난수 생성
