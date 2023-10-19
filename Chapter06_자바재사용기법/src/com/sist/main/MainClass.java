@@ -23,7 +23,7 @@ package com.sist.main;
  * 		}
  * 		
  * 		A ? B (크기비교 불가)
- * 		
+ * 		   
  * 		class A
  * 		{
  * 		}
@@ -58,7 +58,7 @@ package com.sist.main;
  * 						=> 포함
  * 						class Login
  * 						{
- * 							JFrame fr=new JFrame();
+ * 							JFrame fr=new JFrame(); 
  * 							// 메소드에 선언 => 포함클래스가 아니다 (클래스영역에 포함되어야함)
  * 							public void display()
  * 							{
