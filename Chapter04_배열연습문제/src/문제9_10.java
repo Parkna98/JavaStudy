@@ -16,7 +16,7 @@ public class 문제9_10 {
 		for(int i=ch.length-1;i>=0;i--) { 
 			System.out.print(ch[i]+" ");
 		}*/
-		char c='A';
+		char c='A'; 
 		for(int i=0;i<ch.length;i++) {
 			ch[i]=c++;
 		}
