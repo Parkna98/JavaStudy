@@ -18,7 +18,7 @@ import java.awt.event.*;
 						---------
 							ㅣ
 						Exception 
-							ㅣ
+							 ㅣ
 					------------------
 				IOException 	RuntimeException
 									 ㅣ	

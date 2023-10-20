@@ -19,7 +19,7 @@ package com.sist.main;
 			= 메소드
 			
 			class ClassName
-			{
+			{ 
 				----------------
 				멤버변수
 					인스터스변수/공유변수 
