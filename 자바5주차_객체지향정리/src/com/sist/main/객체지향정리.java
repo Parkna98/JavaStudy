@@ -173,10 +173,11 @@ package com.sist.main;
 			= 생성자와 메소드 {}내부에 선언된 것은 모두 로컬변수가 된다
 				=> 필드 선언은 이외의 어디서든 선언 가능
 				
-		10. 클래스에 생성자를 추가하려고 할때, name필드 와 id필드를 
+		12. 클래스에 생성자를 추가하려고 할때, name필드 와 id필드를 
 			외부에서 받은 값으로 초기화 하려면 생성자를 어떻게 선언해야 하는가
 			=> this 이용
-			Member(String name, String id){
+			public Member(String name, String id) => 기본 getter/setter
+			{
 				this.name=name;
 				this.id=id;
 			}
