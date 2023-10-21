@@ -19,7 +19,7 @@ public class 문제9_10 {
 		char c='A';  
 		for(int i=0;i<ch.length;i++) {
 			ch[i]=c++;
-		}
+		} 
 		System.out.println(Arrays.toString(ch));
 	}
 
