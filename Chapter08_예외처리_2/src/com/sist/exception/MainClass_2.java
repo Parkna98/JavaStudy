@@ -139,7 +139,7 @@ public class MainClass_2 {
 			int i=0;
 			while((i=fr.read())!=-1) {
 				sb.append((char)i);
-			}
+			} 
 			System.out.println(sb.toString()); // Vue와 Ajax의 속도차이가 매우많이남
 		}catch(IOException e){
 			// 오류발생 ==> 에러확인
