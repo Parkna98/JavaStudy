@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 // SeoulManager는 데이터 관리 => 데이터먼저 끌고오자 
 public class SeoulManager {
 	// 객체생성먼저
+	// 생성자에 쓰든 블록에쓰든 아니면 메소드만들어서 리턴받든
 	public Seoul[] seoulAllData(int i) {
 		Seoul[] seoul=null; // finally쓰기위한 주소값null
 		String path="c:\\javaDev";
