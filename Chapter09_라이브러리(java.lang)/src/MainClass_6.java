@@ -54,6 +54,7 @@ public class MainClass_6 {
 		
 		//Member m2=new Member(); // 새로운 메모리 공간
 		Member m2=(Member)m1.clone(); // 새로운 메모리공간을 만들어서 m1값을 가져옴
+		System.out.println(m1==m2); // false
 		// m1에 있는 메모리를 그대로 복사 => 새로운 메모리 공간에 붙여넣기
 		// 아바타 => 디자인패턴 (prototype)
 		// 스프링에서 prototype을 사용하면 => 새로운 메모리를 생성
