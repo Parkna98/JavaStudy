@@ -52,7 +52,7 @@ public class MainClass_5 {
 		s1.setAge(20);		// 값이 변경되어서 주소도 달라진다
 		System.out.println("s2.name:"+s2.getName());
 		System.out.println("s2.age:"+s2.getAge());
-		// 위에서 equals와 hascode 메소드를 재정의해서 원래는 new를 쓰면 메모리주소가 다르지만
+		// 위에서 equals와 hashcode 메소드를 재정의해서 원래는 new를 쓰면 메모리주소가 다르지만
 		// 이름과 나이가 같으면 같게 만들었다
 		
 		/*if(s1.equals(s2)) { // 위에서 equals 재정의함
