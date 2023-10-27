@@ -58,6 +58,7 @@ public class MainClass_1 {
 					}
 				
 				}
+				
 //				Element dd1=doc2.select("div.detail_cont dl.list_cont dd").get(0);
 //				Element dd2=doc2.select("div.detail_cont dl.list_cont dd").get(1);
 //				Element dd3=doc2.select("div.detail_cont dl.list_cont dd").get(2);
@@ -74,6 +75,15 @@ public class MainClass_1 {
 				image=image.substring(image.indexOf("(")+1,image.lastIndexOf(")")); // 괄호() 안에있는 것만 짜름
 				//System.out.println(image);
 				
+				String msg=title.text()+"|"
+						+image+"|"
+						+regdate+"|"
+						+genre+"|"
+						+nation+"|"
+						+grade+"|"
+						+time+"|"
+						+score+"|"
+						+make_share+"\r\n";
 //				String msg=(i+1)+"|"
 //						+title.text()+"|"
 //						//+state.text()+"|"
@@ -83,9 +93,9 @@ public class MainClass_1 {
 //						+dd3.text()+"|"
 //						+dd4.text()+"|"
 //						+dd5.text()+"\r\n";
-//				FileWriter fw=new FileWriter("c:\\java_data\\movie.txt",true);
-//				fw.write(msg);
-//				fw.close();
+				FileWriter fw=new FileWriter("c:\\java_data\\movie_netflix.txt",true);
+				fw.write(msg);
+				fw.close();
 			}
 		}catch(Exception ex) {}
 	}	
