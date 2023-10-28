@@ -3,7 +3,7 @@
 // 처음 랭크1로 하고 뒤의 값들과 순서대로 비교하면서 더 큰값있으면 +1.
 import java.util.Arrays;
 public class 문제1 {
-
+ 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		/*int[] arr=new int[5];
