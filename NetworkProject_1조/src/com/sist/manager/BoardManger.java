@@ -42,9 +42,14 @@ public class BoardManger {
 		 */
 		// 웹에서는 오라클 => 인라인뷰
 		// MySQL => LIMIT
-		for(int i=0;i<bList.size();i++) {
+		ArrayList<BoardVO> temp=new ArrayList<BoardVO>();
+		for(int i=bList.size()-1;i>=0;i--) {
+			temp.add(bList.get(i));
+		}
+		
+		for(int i=0;i<temp.size();i++) {
 			if(j<10 && i>=pagecnt) { // 각 페이지별로 pagecnt부터 출력 
-				BoardVO vo=bList.get(i);
+				BoardVO vo=temp.get(i);
 				list.add(vo);
 				j++; // 10개씩 저장
 			}
@@ -82,5 +87,14 @@ public class BoardManger {
 	// 삭제하기 === 동일코딩 ==> 파일에 저장 
 	// 검색하기
 	// 자동 증가번호 만들기 => 시퀀스 
+	public int boardSequence() {
+		int max=0;
+		for(BoardVO vo:bList) {
+			if(vo.getNo()>max) {
+				max=vo.getNo();
+			}
+		}
+		return max+1; // 최대 번호보다 +1로 새로운 게시물 추가
+	}
 	// 공통 => 파일 저장
 }

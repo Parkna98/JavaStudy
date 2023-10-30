@@ -22,7 +22,7 @@ public class MainClass_1 {
 				Element title=doc2.selectFirst("h3.tit_movie span.txt_tit");
 				//System.out.println(title.text());
 				// 디테일
-				String regdate="개봉일 없음",genre="장르 없음",nation="국가 없음",grade="등급 없음",time="상영 시간 없음",score="평점 없음",make_share="누적 관객수 없음";
+				String regdate="개봉일 정보 없음",genre="장르 정보 없음",nation="국가 정보 없음",grade="등급 정보 없음",time="러닝타임 정보 없음",score="평점 정보 없음",make_share="누적관객 정보 없음";
 				Elements etc=doc2.select("div.detail_cont dl.list_cont dt");
 				//System.out.println(etc);
 				for(int a=0;a<etc.size();a++) {

@@ -12,7 +12,7 @@ public class BoardVO implements Serializable{ // ObjectInputStream 쓸때사용
 	private String content; // 내용
 	private Date regdate; // 등록일
 	private String pwd; // 비밀번호 => 수정, 삭제시에 이용 => 본인 여부 확인
-	private String hit; // 조회수
+	private int hit; // 조회수
 	public int getNo() {
 		return no;
 	}
@@ -49,10 +49,10 @@ public class BoardVO implements Serializable{ // ObjectInputStream 쓸때사용
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
 	}
-	public String getHit() {
+	public int getHit() {
 		return hit;
 	}
-	public void setHit(String hit) {
+	public void setHit(int hit) {
 		this.hit = hit;
 	}
 	
