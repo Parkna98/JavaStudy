@@ -12,8 +12,8 @@ public class PosterCard extends JPanel{
 	JLabel tLa=new JLabel(); // 제목
 	public PosterCard(MovieReservationVO vo) {
 		setLayout(null);
-		poLa.setBounds(0, 5, 350, 200);
-		tLa.setBounds(0, 160, 350, 30);
+		poLa.setBounds(5, 5, 365, 400);
+		tLa.setBounds(5, 5, 365, 400);
 		
 		add(poLa);
 		add(tLa);
@@ -21,7 +21,7 @@ public class PosterCard extends JPanel{
 		try {
 			if(vo.getImage()!=null) {	
 				URL url=new URL(vo.getImage()); // 이미지
-				Image image=ImageChange.getImage(new ImageIcon(url), 350, 200); // 이미지 크기를 고정
+				Image image=ImageChange.getImage(new ImageIcon(url), 365, 400); // 이미지 크기를 고정
 				poLa.setIcon(new ImageIcon(image));
 			}
 			

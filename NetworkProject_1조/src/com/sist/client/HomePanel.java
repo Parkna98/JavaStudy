@@ -15,8 +15,8 @@ import com.sist.vo.MovieNetflixVO;
 import com.sist.vo.MovieReservationVO;
 
 public class HomePanel extends JPanel implements ActionListener{
-	JButton b1,b2,b3;
-	PosterCard[] pcs=new PosterCard[12];
+	JButton b1,b2,b3,b4,b5;
+	PosterCard[] pcs=new PosterCard[10];
 	//FoodManager fm=new FoodManager();
 	MovieManager mm=new MovieManager();
 	JPanel pan=new JPanel(); // 이미지가 배치
@@ -25,13 +25,17 @@ public class HomePanel extends JPanel implements ActionListener{
 		p.setLayout(new GridLayout(1,3,20,20)); // 1줄에 3개 배치 (간격 5,5)
 		b1=new JButton("예매 순위");
 		b1.setPreferredSize(new Dimension(300,45));
-		b2=new JButton("박스 오피스 순위");
+		b2=new JButton("박스 오피스");
 		b2.setPreferredSize(new Dimension(300,45));
-		b3=new JButton("OTT 순위");
+		b3=new JButton("Tving");
 		b3.setPreferredSize(new Dimension(300,45));
-		p.add(b1); p.add(b2); p.add(b3);
+		b4=new JButton("Watcha");
+		b4.setPreferredSize(new Dimension(300,45));
+		b5=new JButton("Wave");
+		b5.setPreferredSize(new Dimension(300,45));
+		p.add(b1); p.add(b2); p.add(b3); p.add(b4); p.add(b5);
 		
-		pan.setLayout(new GridLayout(4,3,20,10)); // 총12개이니까 4줄에 각 3개씩
+		pan.setLayout(new GridLayout(2,5,5,5)); // 총12개이니까 4줄에 각 3개씩
 		
 		// 배치
 		setLayout(new BorderLayout()); // 스크롤바를 만들기위한 borderlayout
@@ -41,6 +45,8 @@ public class HomePanel extends JPanel implements ActionListener{
 		b1.addActionListener(this);
 		b2.addActionListener(this);
 		b3.addActionListener(this);
+		b4.addActionListener(this);
+		b5.addActionListener(this);
 	}
 	public void cardPrint(ArrayList<MovieReservationVO> list) {
 		int i=0; 
@@ -92,7 +98,16 @@ public class HomePanel extends JPanel implements ActionListener{
 			ArrayList<MovieReservationVO> list=mm.MovieReservationData(3);
 			cardInit(list);
 			cardPrint(list); 
-			
+		}
+		else if(e.getSource()==b4) {
+			ArrayList<MovieReservationVO> list=mm.MovieReservationData(4);
+			cardInit(list);
+			cardPrint(list); 
+		}
+		else if(e.getSource()==b5) {
+			ArrayList<MovieReservationVO> list=mm.MovieReservationData(5);
+			cardInit(list);
+			cardPrint(list); 
 		}
 	}
 }

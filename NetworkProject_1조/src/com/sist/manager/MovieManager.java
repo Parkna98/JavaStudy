@@ -104,15 +104,23 @@ public class MovieManager {
 			int end=0;
 			if(no==1) {
 				start=0;
-				end=11;
+				end=9;
 			}
 			else if(no==2) {
-				start=12;
-				end=23;
+				start=10;
+				end=19;
 			}
 			else if(no==3) {
-				start=24;
-				end=35;
+				start=20;
+				end=29;
+			}
+			else if(no==4) {
+				start=30;
+				end=39;
+			}
+			else if(no==5) {
+				start=40;
+				end=49;
 			}
 			for(int i=start;i<=end;i++) {
 				list.add(mList.get(i));
