@@ -13,7 +13,7 @@ import javax.swing.table.*;
 import com.sist.vo.*;
 import com.sist.manager.*;
 
-public class BoardListPanel extends JPanel implements ActionListener{
+public class BoardListPanel extends JPanel implements ActionListener, MouseListener{
 	JLabel la,pageLa;
 	JButton b1,b2,b3,b4;
 	JTable table;
@@ -21,7 +21,7 @@ public class BoardListPanel extends JPanel implements ActionListener{
 	ControllPanel cp; // 화면변경 ==> <jsp:include>
 	int curpage=1;
 	int totalPage=0;
-	BoardManger bm=new BoardManger();
+	BoardManager bm=new BoardManager();
 	
 	public BoardListPanel(ControllPanel cp) {
 		this.cp=cp; // 새로운 cp를 넘겨주면 오류남 => 떠있는 창을 넘겨준다
@@ -90,6 +90,8 @@ public class BoardListPanel extends JPanel implements ActionListener{
 		b1.addActionListener(this);
 		b3.addActionListener(this); // 이전
 		b4.addActionListener(this); // 다음
+		table.addMouseListener(this);
+		// this => 처리하는 메소드 위치 => 클래스 내부에 존재
 		boardList();
 	}
 	// 화면 출력
@@ -137,5 +139,61 @@ public class BoardListPanel extends JPanel implements ActionListener{
 				boardList();
 			}
 		}
+	}
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		// 더블 클릭시에 => 상세보기 
+		if(e.getSource()==table) {
+			if(e.getClickCount()==2) { // 더블클릭
+				// 게시물 번호 가지고 오기
+				int row=table.getSelectedRow(); // 몇번째줄 선택했는지
+				String no=model.getValueAt(row, 0).toString(); // 맨 앞열 (0번째 열)을 가져온다
+				//JOptionPane.showMessageDialog(this, no);
+				// => 윈도우, 웹 => 클라이언트(전송) : 서버(응답)
+				// => 			 ------------  --------
+				//					문자열		해당 데이터형으로 변경
+				// 								Wrapper
+				/*
+						오라클 => 숫자 (NUMBER) => int, long, double
+								문자열 (VARCHAR2) => String
+								날짜 (DATE) => Date
+				 */
+				BoardVO vo=bm.boardDetailData(Integer.parseInt(no));
+				cp.bdp.noLa.setText(no); // 번호출력
+				cp.bdp.nameLa.setText(vo.getName());
+				cp.bdp.subLa.setText(vo.getSubject());
+				// 화면 출력시에 => 데이터형이 없다 (문자열)
+				/*
+						String => String.valueOf() => 기본형
+						Object => toString()
+				 */
+				cp.bdp.hitLa.setText(String.valueOf(vo.getHit()));
+				cp.bdp.pane.setText(vo.getContent());
+				cp.bdp.dateLa.setText(new SimpleDateFormat("yyyy-MM-dd").format(vo.getRegdate()));
+				cp.card.show(cp, "detail"); // detail이라는 이름을주면 화면이 바뀐다
+				
+			}
+		}
+	}
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }

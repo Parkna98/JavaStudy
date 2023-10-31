@@ -7,7 +7,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import com.sist.manager.BoardManger;
+import com.sist.manager.BoardManager;
 import com.sist.vo.BoardVO;
 
 import java.awt.*;
@@ -109,7 +109,7 @@ public class BoardInsertPanel extends JPanel implements ActionListener{
 				tf3.requestFocus();
 				return;
 			}
-			BoardManger bm=new BoardManger();
+			BoardManager bm=new BoardManager();
 			BoardVO vo=new BoardVO();
 			vo.setNo(bm.boardSequence());
 			vo.setName(name);

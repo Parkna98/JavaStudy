@@ -7,7 +7,7 @@ import com.sist.vo.BoardVO;
 import java.text.*; // SimpleDateFormat
 import java.io.*; // File관련 => ObjectInputStream / ObjectOutputStream
 
-public class BoardManger {
+public class BoardManager {
 	// 게시물 목록 => 모아서 관리
 	private static ArrayList<BoardVO> bList=new ArrayList<BoardVO>();
 	// 값 채우기
@@ -83,8 +83,84 @@ public class BoardManger {
 		}
 	}
 	// 상세보기
+	public BoardVO boardDetailData(int no) {
+		BoardVO vo=new BoardVO();
+		for(int i=0;i<bList.size();i++) {
+			BoardVO bVO=bList.get(i);
+			if(bVO.getNo()==no) {
+				bVO.setHit(bVO.getHit()+1); // 한번누르면 조회수 1증가
+				vo=bVO;
+				fileSave(); // 파일과 ArrayList가 동일
+				break;
+				// 다음주부터 => 파일 / 오라클
+				// UPDATE board SET hit=hit+1 WHERE no=1;
+				// 오라클 (웹 핵심) => SQL
+				// SQL (CRUD => SELECT,INSERT,UPDATE,DELETE)
+			}
+		}
+		return vo;
+	}
 	// 수정하기 ===
+	public BoardVO boardUpdateData(int no) {
+		BoardVO vo=new BoardVO();
+		// 오라클 SELECT * FROM board WHERE no=1
+		for(BoardVO bVO:bList) {
+			if(bVO.getNo()==no) {
+				vo=bVO; // 수정할 게시물 찾아서 해당게시물내용 전부 가져오기 위함
+				break;  
+			}
+		}
+		return vo;
+	}
+	// 실제 수정
+	public String boardUpdate(BoardVO vo) {
+		String result=""; // YES / NO
+		for(int i=0;i<bList.size();i++) {
+			// remove(index), set(index) => 수정, 삭제시 인덱스번호 필요 => 인덱스필요하지 않은 기능은 for-each 사용
+			BoardVO pVO=bList.get(i);
+			if(pVO.getNo()==vo.getNo()) { // 서버에저장된 값(pVO)과 사용자가 보내준 값(vo)이 같을때
+				if(pVO.getPwd().equals(vo.getPwd())) {
+					// 수정 가능한 상태 (비밀번호 일치)
+					result="YES";
+					//bList.set(i, vo); // 메모리 상에서 수정
+					pVO.setContent(vo.getContent());
+					pVO.setName(vo.getName());
+					pVO.setSubject(vo.getSubject());
+					
+					fileSave(); 	// 메모리는 날아가므로 수정된 내용 파일에 저장
+				}
+				else {
+					// 비밀번호 다름 
+					result="NO";
+				}
+				break;
+			}
+		}
+		return result;
+	}
 	// 삭제하기 === 동일코딩 ==> 파일에 저장 
+	// ArrayList 제어 / 파일 제어 => 웹 => Manager
+	// 웹 => 파일 대신 오라클로 변경
+	public String boardDelete(int no, String pwd) {
+		String result=""; // NO, YES
+		for(int i=0;i<bList.size();i++) { // 삭제할때 arrayList의 인덱스번호가 필요
+			BoardVO vo=bList.get(i);
+			if(vo.getNo()==no) {
+				if(vo.getPwd().equals(pwd)) {
+					// 삭제 대상 => 비밀번호가 일치
+					result="YES";
+					bList.remove(i);
+					fileSave(); // 삭제후 저장까지해서 파일에도 삭제가 되도록
+				}
+				else {
+					// 비밀번호가 틀린 상태
+					result="NO";
+				}
+				break;
+			}
+		}
+		return result;
+	}
 	// 검색하기
 	// 자동 증가번호 만들기 => 시퀀스 
 	public int boardSequence() {

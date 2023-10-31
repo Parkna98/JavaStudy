@@ -20,7 +20,7 @@ package com.sist.io;
 			   		ㅣ										ㅣ
 			---------------------				-----------------------------		
 			ㅣ					ㅣ				ㅣ							ㅣ
-	**FileInutStream	FilterInputStream	FileOutputStream		FilterOutputStream	
+	**FileInputStream	FilterInputStream	FileOutputStream		FilterOutputStream	
 								ㅣ											ㅣ
 					 **BufferedInputStream						  **BufferedOutputStream
 					 ** Buffer : 임시 기억장소 => 속도 최적화
