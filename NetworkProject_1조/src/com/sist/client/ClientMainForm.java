@@ -1,7 +1,12 @@
 package com.sist.client;
 import javax.swing.*;
+import java.util.*;
 
 import com.sist.common.ImageChange;
+import com.sist.manager.FoodManager;
+import com.sist.manager.MovieManager;
+import com.sist.vo.FoodCategoryVO;
+import com.sist.vo.MovieReservationVO;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,6 +17,8 @@ public class ClientMainForm extends JFrame implements ActionListener{
 	ControllPanel cp=new ControllPanel();
 	JLabel logo=new JLabel();
 	Login login=new Login();
+	//FoodManager fm=new FoodManager();
+	MovieManager mm=new MovieManager();
 	public ClientMainForm() {
 		setLayout(null); // 화면 배치 => null:지원안받음 => 직접배치
 		logo.setBounds(320,20,1120,60);
@@ -35,6 +42,9 @@ public class ClientMainForm extends JFrame implements ActionListener{
 		mp.b6.addActionListener(this);
 		
 		login.b1.addActionListener(this); // 로그인이 갖고있는 버튼
+		ArrayList<MovieReservationVO> list=mm.MovieReservationData();
+		//cp.hp.cardInit(list);
+		cp.hp.cardPrint(list);
 		
 	}
 	public static void main(String[] args) {
