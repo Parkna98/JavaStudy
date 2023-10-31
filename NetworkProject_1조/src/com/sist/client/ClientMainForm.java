@@ -42,7 +42,7 @@ public class ClientMainForm extends JFrame implements ActionListener{
 		mp.b6.addActionListener(this);
 		
 		login.b1.addActionListener(this); // 로그인이 갖고있는 버튼
-		ArrayList<MovieReservationVO> list=mm.MovieReservationData();
+		ArrayList<MovieReservationVO> list=mm.MovieReservationData(1);
 		//cp.hp.cardInit(list);
 		cp.hp.cardPrint(list);
 		
