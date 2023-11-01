@@ -3,7 +3,7 @@ import java.awt.CardLayout;
 
 import javax.swing.*;
 public class ControllPanel extends JPanel{
-	public HomePanel hp=new HomePanel();
+	public HomePanel hp;
 	public ChatPanel cp=new ChatPanel();
 	public BoardListPanel blp;
 	public NewsPanel np=new NewsPanel();
@@ -11,6 +11,8 @@ public class ControllPanel extends JPanel{
 	public BoardDetailPanel bdp;
 	public BoardDeletePanel bdel;
 	public BoardUpdatePanel bup;
+	public MovieDetailPanel mdp;
+	public MovieFindPanel mfp;
 	
 	public CardLayout card=new CardLayout(); // 화면이 바뀌어도 고정된 부분(타이틀부분 등)을 하나만 쓰겠다
 	public ControllPanel() {
@@ -22,6 +24,9 @@ public class ControllPanel extends JPanel{
 		bdp=new BoardDetailPanel(this);
 		bdel=new BoardDeletePanel(this);
 		bup=new BoardUpdatePanel(this);
+		mdp=new MovieDetailPanel(this);
+		mfp=new MovieFindPanel(this);
+		hp=new HomePanel(this);
 		setLayout(card);
 		add("home",hp);
 		add("chat",cp);
@@ -31,6 +36,8 @@ public class ControllPanel extends JPanel{
 		add("detail",bdp); // 화면 이동
 		add("delete",bdel); // delete 이름을 주면 bdel로 화면보여줘
 		add("update",bup);
+		add("mdetail",mdp);
+		add("find",mfp);
 		// Spring => @RequestMapping("update.jsp") 
 		// NodeJS => app.get("update")
 	}

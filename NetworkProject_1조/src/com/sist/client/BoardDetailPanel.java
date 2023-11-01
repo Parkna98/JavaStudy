@@ -16,7 +16,7 @@ public class BoardDetailPanel extends JPanel implements ActionListener{
     {
    	 this.cp=cp;
    	 titleLa=new JLabel("내용보기");
-    	 titleLa.setFont(new Font("맑은 고딕",Font.BOLD,45));
+    	 titleLa.setFont(new Font("맑은 고딕",Font.BOLD,35));
     	 titleLa.setHorizontalAlignment(JLabel.CENTER);
     	 
     	 la1=new JLabel("번호");
@@ -41,40 +41,46 @@ public class BoardDetailPanel extends JPanel implements ActionListener{
     	 hitLa=new JLabel();
     	 
     	 pane=new JTextPane();
+    	 pane.setEditable(false);
     	 JScrollPane js=new JScrollPane(pane);
     	 
-    	 b1=new JButton("수정");
-    	 b2=new JButton("삭제");
-    	 b3=new JButton("목록");
+    	 b1=new JButton("     수정     ");
+    	 b2=new JButton("     삭제     ");
+    	 b3=new JButton("     목록     ");
     	 
     	 //배치 
     	 setLayout(null);
-    	 titleLa.setBounds(610, 15, 700, 50);
+    	 titleLa.setBounds(320, 15, 1260, 50);
   	     add(titleLa);
   	    
-  	     la1.setBounds(10, 85, 60, 30);
-  	     noLa.setBounds(75, 85, 300, 30);
+  	     la1.setBounds(320, 85, 60, 30);
+  	     noLa.setBounds(385, 85, 300, 30);
   	     la2.setBounds(385, 85, 60, 30);
-	     dateLa.setBounds(450, 85, 300, 30);
+	     dateLa.setBounds(450, 150, 300, 30);
   	     add(la1);add(noLa);add(la2);add(dateLa);
 	     
-	     la3.setBounds(10, 120, 60, 30);
-  	     nameLa.setBounds(75, 120, 300, 30);
-  	     la4.setBounds(385, 120, 60, 30);
-	     hitLa.setBounds(450, 120, 300, 30);
+	     la3.setBounds(320, 120, 60, 30);
+  	     nameLa.setBounds(385, 150, 100, 30);
+  	     la4.setBounds(1480, 150, 80, 30);
+	     hitLa.setBounds(1565, 150, 100, 30);
 	     
 	     add(la3);add(nameLa);add(la4);add(hitLa);
-	     la5.setBounds(10, 155, 60, 30);
-  	     subLa.setBounds(75, 155, 615, 30);
+	     la5.setBounds(320, 155, 60, 30);
+  	     subLa.setBounds(385, 110, 1260, 30);
   	     add(la5);add(subLa);
-  	     js.setBounds(10, 190, 675, 150);
+  	     js.setBounds(320, 190, 1260, 500);
   	     add(js);
+  	     subLa.setFont(new Font("맑은 고딕", Font.BOLD,25));
   	     
   	     JPanel p=new JPanel();
+  	     p.setLayout(new FlowLayout(FlowLayout.CENTER,30,5));
+	     b1.setFont(new Font("맑은 고딕", Font.BOLD,15));
+	     b2.setFont(new Font("맑은 고딕", Font.BOLD,15));
+	     b3.setFont(new Font("맑은 고딕", Font.BOLD,15));
   	     p.add(b1);
   	     p.add(b2);
   	     p.add(b3);
-  	     p.setBounds(10, 350, 675, 35);
+  	     p.setBounds(0, 755, 1920, 35);
   	     add(p);
   	     
   	     b3.addActionListener(this);

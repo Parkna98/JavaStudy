@@ -3,6 +3,7 @@ package com.sist.vo;
 import java.io.Serializable;
 //그대들은 어떻게 살 것인가|https://img1.daumcdn.net/thumb/C408x596/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F814364da4037f74217243eeee6b4648d7dc2fc79|2023.10.25|애니메이션/어드벤처/판타지/드라마|일본|전체관람가|123분|5.6|1,007,648명
 public class MovieReservationVO implements Serializable{
+	private int mno;
 	private String title;
 	private String image;
 	private String regdate;
@@ -13,6 +14,12 @@ public class MovieReservationVO implements Serializable{
 	private String score;
 	private String make_share;
 	
+	public int getMno() {
+		return mno;
+	}
+	public void setMno(int mno) {
+		this.mno = mno;
+	}
 	public String getTitle() {
 		return title;
 	}

@@ -3,6 +3,7 @@ import java.util.*;
 import java.io.*;
 
 import com.sist.vo.FoodCategoryVO;
+import com.sist.vo.FoodHouseVO;
 import com.sist.vo.MovieNetflixVO;
 import com.sist.vo.MovieReservationVO;
 import com.sist.vo.MovieReservationVO.*;
@@ -14,6 +15,13 @@ public class MovieManager {
 			FileReader fr=null;
 			ObjectOutputStream ois=null;
 			FileOutputStream fis=null;
+			try {
+				
+			}catch(Exception ex) {
+				
+			}finally {
+				
+			}
 			try {
 				fr=new FileReader("c:\\java_data\\movie_cate.txt");
 				String data="";
@@ -27,6 +35,7 @@ public class MovieManager {
 				for(String s:cates) {
 					StringTokenizer st=new StringTokenizer(s,"|"); // 파일의 인코딩이 UTF-8일때 오류가 남 ==> 다른이름으로 저장=> ANSI로 저장 => 해결
 					MovieReservationVO vo=new MovieReservationVO();
+					vo.setMno(Integer.parseInt(st.nextToken().replace("\ufeff", "")));
 					vo.setTitle(st.nextToken());
 					vo.setImage(st.nextToken());
 					vo.setRegdate(st.nextToken());
@@ -127,5 +136,24 @@ public class MovieManager {
 			}
 			return list;
 		}
+		public MovieReservationVO movieInfoData(String title) { // 맛집하나의 세부정보 => fno없이 title로 가능할지
+			   MovieReservationVO vo=new MovieReservationVO();
+			   for(MovieReservationVO mvo:mList) {
+				   if(mvo.getTitle().equals(title)) {
+					   vo=mvo;
+					   break;
+				   }
+			   }
+			   return vo;
+		   }
+		 public ArrayList<MovieReservationVO> MovieFindData(String title){
+			   ArrayList<MovieReservationVO> list=new ArrayList<MovieReservationVO>();
+			   for(MovieReservationVO mvo:mList) {
+				   if(mvo.getTitle().contains(title)) {
+					   list.add(mvo);
+				   }
+			   }
+			   return list;
+		   }
 		
 }

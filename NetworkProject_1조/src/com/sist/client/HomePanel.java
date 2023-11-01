@@ -4,6 +4,8 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -11,16 +13,19 @@ import javax.swing.*;
 import com.sist.manager.FoodManager;
 import com.sist.manager.MovieManager;
 import com.sist.vo.FoodCategoryVO;
+import com.sist.vo.FoodHouseVO;
 import com.sist.vo.MovieNetflixVO;
 import com.sist.vo.MovieReservationVO;
 
-public class HomePanel extends JPanel implements ActionListener{
+public class HomePanel extends JPanel implements ActionListener,MouseListener{
 	JButton b1,b2,b3,b4,b5;
 	PosterCard[] pcs=new PosterCard[10];
 	//FoodManager fm=new FoodManager();
 	MovieManager mm=new MovieManager();
 	JPanel pan=new JPanel(); // 이미지가 배치
-	public HomePanel() {
+	ControllPanel cp;
+	public HomePanel(ControllPanel cp) {
+		this.cp=cp;
 		JPanel p=new JPanel();
 		p.setLayout(new GridLayout(1,3,20,20)); // 1줄에 3개 배치 (간격 5,5)
 		b1=new JButton("예매 순위");
@@ -47,6 +52,7 @@ public class HomePanel extends JPanel implements ActionListener{
 		b3.addActionListener(this);
 		b4.addActionListener(this);
 		b5.addActionListener(this);
+
 	}
 	public void cardPrint(ArrayList<MovieReservationVO> list) {
 		int i=0; 
@@ -60,6 +66,7 @@ public class HomePanel extends JPanel implements ActionListener{
 //				}
 			//}
 			pan.add(pcs[i]);
+			pcs[i].addMouseListener(this);
 			i++;
 		}
 	}
@@ -109,5 +116,42 @@ public class HomePanel extends JPanel implements ActionListener{
 			cardInit(list);
 			cardPrint(list); 
 		}
+	}
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		for(int i=0;i<pcs.length;i++)
+		{
+			if(e.getSource()==pcs[i])
+			{
+				if(e.getClickCount()==2)
+				{
+					String title=pcs[i].tLa.getText();
+					MovieReservationVO vo=mm.movieInfoData(title); // 
+					cp.mdp.MoviePrint(vo);
+					cp.card.show(cp,"mdetail");
+				}
+			}
+		}
+	}
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
