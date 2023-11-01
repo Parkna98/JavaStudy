@@ -65,7 +65,7 @@ public class ClientMainForm extends JFrame implements ActionListener{
 		{	
 			cp.mfp.tf.setText("");
 			for(int i=cp.mfp.model.getRowCount()-1;i>=0;i--) {
-				cp.mfp.model.removeRow(i);
+				cp.mfp.model.removeRow(i); 
 			}
 			cp.card.show(cp, "find");
 		}
