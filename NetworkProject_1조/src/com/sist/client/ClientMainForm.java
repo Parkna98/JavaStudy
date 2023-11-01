@@ -62,7 +62,11 @@ public class ClientMainForm extends JFrame implements ActionListener{
 			cp.card.show(cp, "home");
 		}
 		else if(e.getSource()==mp.b2)
-		{
+		{	
+			cp.mfp.tf.setText("");
+			for(int i=cp.mfp.model.getRowCount()-1;i>=0;i--) {
+				cp.mfp.model.removeRow(i);
+			}
 			cp.card.show(cp, "find");
 		}
 		else if(e.getSource()==mp.b3) {

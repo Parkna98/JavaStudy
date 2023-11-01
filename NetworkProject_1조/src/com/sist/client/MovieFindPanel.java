@@ -52,10 +52,14 @@ public class MovieFindPanel extends JPanel implements ActionListener {
 		p.add(b1);
 		p.add(b2);
 		
-		setLayout(new BorderLayout());
-		add("North",p);
-		add("Center",js);
 		
+//		setLayout(new BorderLayout());
+//		add("North",p);
+//		add("Center",js);
+		setLayout(null);
+		p.setBounds(320, 10, 1280, 100);
+		js.setBounds(320, 110, 1280, 800);
+		add(p); add(js);
 		b1.addActionListener(this);
 		b2.addActionListener(this);
 		tf.addActionListener(this);

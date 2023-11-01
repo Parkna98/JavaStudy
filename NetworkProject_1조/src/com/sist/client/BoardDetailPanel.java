@@ -54,23 +54,33 @@ public class BoardDetailPanel extends JPanel implements ActionListener{
   	     add(titleLa);
   	    
   	     la1.setBounds(320, 85, 60, 30);
+  	     la1.setFont(new Font("맑은 고딕", Font.PLAIN,15));
   	     noLa.setBounds(385, 85, 300, 30);
-  	     la2.setBounds(385, 85, 60, 30);
-	     dateLa.setBounds(450, 150, 300, 30);
+  	     noLa.setFont(new Font("맑은 고딕", Font.PLAIN,15));
+  	     la2.setBounds(600, 85, 60, 30);
+  	     la2.setFont(new Font("맑은 고딕", Font.PLAIN,15));
+	     dateLa.setBounds(665, 85, 300, 30);
+	     dateLa.setFont(new Font("맑은 고딕", Font.PLAIN,15));
   	     add(la1);add(noLa);add(la2);add(dateLa);
 	     
 	     la3.setBounds(320, 120, 60, 30);
-  	     nameLa.setBounds(385, 150, 100, 30);
+	     la3.setFont(new Font("맑은 고딕", Font.PLAIN,15));
+  	     nameLa.setBounds(385, 120, 100, 30);
+  	     nameLa.setFont(new Font("맑은 고딕", Font.PLAIN,15));
   	     la4.setBounds(1480, 150, 80, 30);
+  	     la4.setFont(new Font("맑은 고딕", Font.PLAIN,15));
 	     hitLa.setBounds(1565, 150, 100, 30);
+	     hitLa.setFont(new Font("맑은 고딕", Font.PLAIN,15));
 	     
 	     add(la3);add(nameLa);add(la4);add(hitLa);
 	     la5.setBounds(320, 155, 60, 30);
-  	     subLa.setBounds(385, 110, 1260, 30);
+	     la5.setFont(new Font("맑은 고딕", Font.PLAIN,15));
+  	     subLa.setBounds(385, 155, 500, 30);
+  	     subLa.setFont(new Font("맑은 고딕", Font.PLAIN,15));
   	     add(la5);add(subLa);
   	     js.setBounds(320, 190, 1260, 500);
   	     add(js);
-  	     subLa.setFont(new Font("맑은 고딕", Font.BOLD,25));
+  	     //subLa.setFont(new Font("맑은 고딕", Font.BOLD,25));
   	     
   	     JPanel p=new JPanel();
   	     p.setLayout(new FlowLayout(FlowLayout.CENTER,30,5));

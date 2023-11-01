@@ -42,10 +42,10 @@ public class MovieDetailPanel extends JPanel implements ActionListener {
 		
 		// 배치
 				setLayout(null);
-				imageLa.setBounds(10, 15, 300, 375);
+				imageLa.setBounds(320, 125, 300, 400);
 				add(imageLa);
 				
-				titleLa.setBounds(320, 15, 300, 35);
+				titleLa.setBounds(700, 125, 700, 45);
 				scoreLa.setBounds(450, 15, 40, 35);
 				add(titleLa); add(scoreLa);
 				
@@ -90,7 +90,7 @@ public class MovieDetailPanel extends JPanel implements ActionListener {
 			make_shareLa.setText(vo.getMake_share());
 			
 			URL url=new URL(vo.getImage());
-			Image image=ImageChange.getImage(new ImageIcon(url), 300, 500);
+			Image image=ImageChange.getImage(new ImageIcon(url), 300, 400);
 			imageLa.setIcon(new ImageIcon(image));
 		}catch(Exception ex) {}
 	}
