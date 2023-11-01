@@ -1,7 +1,7 @@
 package com.sist.manager;
 import java.util.*;
 import java.io.*;
-
+import java.util.stream.*;
 import com.sist.vo.FoodCategoryVO;
 import com.sist.vo.FoodHouseVO;
 import com.sist.vo.MovieNetflixVO;
@@ -146,14 +146,38 @@ public class MovieManager {
 			   }
 			   return vo;
 		   }
-		 public ArrayList<MovieReservationVO> MovieFindData(String title){
-			   ArrayList<MovieReservationVO> list=new ArrayList<MovieReservationVO>();
-			   for(MovieReservationVO mvo:mList) {
-				   if(mvo.getTitle().contains(title)) {
-					   list.add(mvo);
+		   public ArrayList<MovieReservationVO> MovieFindData(String title)
+		   {
+			   ArrayList<MovieReservationVO> list=
+					   new ArrayList<MovieReservationVO>();
+			   
+			   for(MovieReservationVO mvo:mList)
+			   {
+				   if(mvo.getTitle().contains(title))
+				   {
+					   if (list.size() == 0 )
+						   list.add(mvo);
+					   else {
+					   for(MovieReservationVO lst:list) {
+						   if(!(lst.getTitle().equals(mvo.getTitle())))
+							   list.add(mvo);
+					   }
+					   }
 				   }
 			   }
 			   return list;
 		   }
+//		 public ArrayList<MovieReservationVO> MovieFindData(String title){
+//			   ArrayList<MovieReservationVO> list=new ArrayList<MovieReservationVO>();
+//			   Set<MovieReservationVO> set=new HashSet
+//			   for(MovieReservationVO mvo:mList) {
+//				   if(mvo.getTitle().contains(title)) {
+//					   list.add(mvo);
+//				   }
+//			   }
+//			   List<MovieReservationVO> mmlist = list.stream().distinct().collect(Collectors.toList());
+//			   
+//			   return asList(mmlist);
+//		   }
 		
 }
