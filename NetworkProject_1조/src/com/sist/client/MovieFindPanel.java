@@ -67,6 +67,8 @@ public class MovieFindPanel extends JPanel implements ActionListener {
 	public void findPrint(String title) {
 		try {
 			ArrayList<MovieReservationVO> list=mm.MovieFindData(title);
+//			Set<MovieReservationVO> set=new HashSet<MovieReservationVO>(list);
+//			list=new ArrayList<MovieReservationVO>(set);
 			for(int i=model.getRowCount()-1;i>=0;i--) {
 				model.removeRow(i);
 			}
@@ -78,6 +80,7 @@ public class MovieFindPanel extends JPanel implements ActionListener {
 						new ImageIcon(image),vo.getTitle(),vo.getGenre()
 				};
 				model.addRow(obj);
+				
 			}
 		}catch(Exception ex) {}
 	}

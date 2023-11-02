@@ -146,38 +146,47 @@ public class MovieManager {
 			   }
 			   return vo;
 		   }
-		   public ArrayList<MovieReservationVO> MovieFindData(String title)
-		   {
-			   ArrayList<MovieReservationVO> list=
-					   new ArrayList<MovieReservationVO>();
-			   
-			   for(MovieReservationVO mvo:mList)
-			   {
-				   if(mvo.getTitle().contains(title))
-				   {
-					   if (list.size() == 0 )
-						   list.add(mvo);
-					   else {
-					   for(MovieReservationVO lst:list) {
-						   if(!(lst.getTitle().equals(mvo.getTitle())))
-							   list.add(mvo);
-					   }
-					   }
-				   }
-			   }
-			   return list;
-		   }
+//		   public ArrayList<MovieReservationVO> MovieFindData(String title)
+//		   {
+//			   ArrayList<MovieReservationVO> list=
+//					   new ArrayList<MovieReservationVO>();
+//			   
+//			   for(MovieReservationVO mvo:mList)
+//			   {
+//				   if(mvo.getTitle().contains(title))
+//				   {
+//					   if (list.size() == 0 )
+//						   list.add(mvo);
+//					   else {
+//					   for(MovieReservationVO lst:list) {
+//						   if(!(lst.getTitle().equals(mvo.getTitle())))
+//							   list.add(mvo);
+//					   }
+//					   }
+//				   }
+//			   }
+//			   return list;
+//		   }
 //		 public ArrayList<MovieReservationVO> MovieFindData(String title){
 //			   ArrayList<MovieReservationVO> list=new ArrayList<MovieReservationVO>();
-//			   Set<MovieReservationVO> set=new HashSet
+//			   for(int i=0;i<mList.size();i++) {
+//				   if(mList.get(i).getTitle().con)
+//			   }
 //			   for(MovieReservationVO mvo:mList) {
 //				   if(mvo.getTitle().contains(title)) {
 //					   list.add(mvo);
 //				   }
 //			   }
-//			   List<MovieReservationVO> mmlist = list.stream().distinct().collect(Collectors.toList());
-//			   
-//			   return asList(mmlist);
+//			   return list;
 //		   }
+		 public ArrayList<MovieReservationVO> MovieFindData(String title){
+			   ArrayList<MovieReservationVO> list=new ArrayList<MovieReservationVO>();
+			   for(MovieReservationVO mvo:mList) {
+				   if(mvo.getTitle().contains(title)) {
+					   list.add(mvo);
+				   }
+			   }
+			   return list;
+		   }
 		
 }
