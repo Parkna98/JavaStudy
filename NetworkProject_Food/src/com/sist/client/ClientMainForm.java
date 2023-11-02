@@ -77,7 +77,10 @@ public class ClientMainForm extends JFrame implements ActionListener, Runnable{
     	ArrayList<FoodCategoryVO> list=fm.foodCategoryData(1);
     	//cp.hp.cardInit();
     	cp.hp.cardPrint(list);
-    			
+    	
+    	// 채팅 등록
+    	cp.cp.tf.addActionListener(this); // cp(chatpanel) 창에서 tf쪽에 엔터쳤을 때 수행
+    	
     }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -140,6 +143,17 @@ public class ClientMainForm extends JFrame implements ActionListener, Runnable{
 			}
 			// 서버연결
 			connect(id, name, sex);
+		}
+		else if(e.getSource()==cp.cp.tf) {
+			String msg=cp.cp.tf.getText();
+			if(msg.trim().length()<1)
+				return;
+			// 채팅 메세지 전송
+			try {
+				out.write((Function.WAITCHAT+"|"+msg+"\n").getBytes()); // 서버에 채팅을 요청 (\n을 반드시 줘야함)
+				// 네트워크 => 보낼때 1바이트 받을때 2바이트 형식으로 진행중
+			}catch(Exception ex) {}
+			cp.cp.tf.setText("");
 		}
 	}
 	

@@ -6,9 +6,10 @@ import java.awt.*;
 public class ChatPanel extends JPanel {
 	JTable table1,table2;
 	DefaultTableModel model1,model2;
-	JTextPane pane;
+	JTextArea pane;
 	JTextField tf;
 	JButton b1,b2,b3,b4,b5,b6;
+	JScrollBar bar;
 	public ChatPanel (){
 		setLayout(null);
 		String[] col1={"방이름","상태","인원"};
@@ -31,12 +32,14 @@ public class ChatPanel extends JPanel {
 		js2.setBounds(320, 525, 700, 300);
 		add(js2);
 		
-		pane=new JTextPane();
+		pane=new JTextArea();
 		JScrollPane js3=new JScrollPane(pane); // 스크롤
 		pane.setEditable(false);
 		
 		js3.setBounds(1030,15,550,500);
 		add(js3);
+		
+		bar=js3.getVerticalScrollBar(); // 채팅이 길어지면 새로운 채팅을 볼수있게 스크롤이 자동으로 내려가는 기능추가
 		
 		tf=new JTextField();
 		tf.setBounds(1030, 520, 550, 30);

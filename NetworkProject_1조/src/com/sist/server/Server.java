@@ -28,7 +28,7 @@ public class Server implements Runnable{
 	// 클라이언트 정보 저장 => id, name, sex, ip, port
 	private Vector<Client> waitVc=new Vector<Client>();
 	private ServerSocket ss;
-	private final int PORT=3355; // 결정한 포트번호 : 11111
+	private final int PORT=11111; // 결정한 포트번호 : 11111
 	
 	// 서버 가동 ==> 한번만 실행이 가능 => 두번실행하면 오류 => 껐다가 다시실행해야함
 	public Server() {
@@ -112,7 +112,22 @@ public class Server implements Runnable{
 					}
 					break;
 					case Function.EXIT:{
-						
+						messageAll(Function.WAITCHAT+"|[알림 ☞"+name+"님 퇴장하셨습니다.");
+						messageAll(Function.EXIT+"|"+id);
+						// 아이디를 테이블에서 제거
+						for(int i=0;i<waitVc.size();i++) {
+							Client client=waitVc.get(i);
+							if(client.id.equals(id)) { 		// 아이디는 다른아이디로 (중복X)
+								messageTo(Function.MYEXIT+"|"); // 윈도우를 종료
+								waitVc.remove(i);
+								try {
+									// 송수신 종료
+									in.close();
+									out.close();
+								}catch(Exception ex) {}
+								break;
+							}
+						}
 					}
 					break;
 					}
