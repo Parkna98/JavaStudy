@@ -8,9 +8,12 @@ import com.sist.manager.MovieManager;
 import com.sist.vo.FoodCategoryVO;
 import com.sist.vo.MovieReservationVO;
 
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
+import java.net.*;
 
 public class ClientMainForm extends JFrame implements ActionListener{
 	MenuPanel mp=new MenuPanel();
