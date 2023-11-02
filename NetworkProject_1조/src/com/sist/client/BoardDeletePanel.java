@@ -15,35 +15,37 @@ public class BoardDeletePanel extends JPanel implements ActionListener{
     BoardManager bm=new BoardManager();
     public BoardDeletePanel(ControllPanel cp)
     {
-    	this.cp=cp;
-    	titleLa=new JLabel("삭제하기");
-    	titleLa.setFont(new Font("맑은 고딕",Font.BOLD,45));
-    	titleLa.setHorizontalAlignment(JLabel.CENTER);
-    	
-    	la=new JLabel("비밀번호");
-    	pf=new JPasswordField();
-    	la1=new JLabel();
-    	la1.setVisible(false);
-    	b1=new JButton("     삭제     ");
-    	b2=new JButton("     취소     ");
-    	setLayout(null);
-    	titleLa.setBounds(610, 15, 700, 50);
-  	    add(titleLa);
-  	    add(la1);
-  	    la.setBounds(800, 200, 80, 30);
-  	    pf.setBounds(880, 200, 200, 30);
-  	    add(la);add(pf);
-  	    
-  	    JPanel p=new JPanel();
-  	    p.setLayout(new FlowLayout(FlowLayout.CENTER,30,5));
-  	    p.add(b1);
-  	    p.add(b2);
-  	    p.setBounds(0, 270, 1920, 35);
-  	    add(p);
-  	    
-  	    b1.addActionListener(this);
-  	    b2.addActionListener(this);
-    }
+        	this.cp=cp;
+        	titleLa=new JLabel("삭제하기");
+        	titleLa.setFont(new Font("맑은 고딕",Font.BOLD,35));
+        	titleLa.setHorizontalAlignment(JLabel.CENTER);
+        	
+        	la=new JLabel("비밀번호");
+        	pf=new JPasswordField();
+        	la1=new JLabel();
+        	la1.setVisible(false);
+        	b1=new JButton("     삭제     ");
+        	b2=new JButton("     취소     ");
+        	b1.setFont(new Font("맑은 고딕",Font.PLAIN,15));
+    		b2.setFont(new Font("맑은 고딕",Font.PLAIN,15));
+        	setLayout(null);
+        	titleLa.setBounds(0, 20, 1260, 50);
+      	    add(titleLa);
+      	    add(la1);
+      	    la.setBounds(450, 150, 80, 30);
+      	    pf.setBounds(530, 150, 240, 30);
+      	    add(la);add(pf);
+      	    
+      	    JPanel p=new JPanel();
+      	    p.setLayout(new FlowLayout(FlowLayout.CENTER,30,5));
+      	    p.add(b1);
+      	    p.add(b2);
+      	    p.setBounds(0, 270, 1260, 35);
+      	    add(p);
+      	    
+      	    b1.addActionListener(this);
+      	    b2.addActionListener(this);
+        }
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

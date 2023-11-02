@@ -45,10 +45,10 @@ public class ClientMainForm extends JFrame implements ActionListener,Runnable,Mo
 		logo.setBounds(320,20,1120,60);
 		logo.setIcon(new ImageIcon(ImageChange.getImage(new ImageIcon("c:\\javaDev\\logo.png"),130,60)));
 		add(logo);
-		mp.setBounds(460,40,1120,40); // setBounds(a,b,c,d) c,d : 버튼 크기 조절 
+		mp.setBounds(480,40,1100,40); // setBounds(a,b,c,d) c,d : 버튼 크기 조절 
 		add(mp);
 		
-		cp.setBounds(0,120,1920,940);
+		cp.setBounds(320,150,1260, 800);
 		add(cp);
 		setSize(1920,1080);
 		//setVisible(true);

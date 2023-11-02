@@ -24,12 +24,12 @@ public class BoardInsertPanel extends JPanel implements ActionListener{
 	JButton b1,b2;
 	public BoardInsertPanel(ControllPanel cp) { // 새글 버튼을 눌렀을 때 창을 변경
 		this.cp=cp;
-		la=new JLabel("자유 게시판");
+		la=new JLabel("자유게시판");
 		// 배치
 		setLayout(null); // 사용자 정의 배치
 		la.setHorizontalAlignment(JLabel.CENTER);
-		la.setFont(new Font("맑은 고딕",Font.BOLD,40)); // 보통의 글자크기 default 20
-		la.setBounds(610, 15, 700, 50);
+		la.setFont(new Font("맑은 고딕",Font.BOLD,35)); // 보통의 글자크기 default 20
+		la.setBounds(0, 15, 1260, 50);
 		add(la);
 		
 		la1=new JLabel("이름");
@@ -44,38 +44,38 @@ public class BoardInsertPanel extends JPanel implements ActionListener{
 		ta=new JTextArea();
 		JScrollPane js=new JScrollPane(ta);
 		
-		b1=new JButton("        글쓰기        ");
-		b2=new JButton("        취소        ");
+		b1=new JButton("     글쓰기     ");
+		b1.setFont(new Font("맑은 고딕",Font.PLAIN,15));
+		b2=new JButton("     취소     ");
+		b2.setFont(new Font("맑은 고딕",Font.PLAIN,15));
 		
 		//배치 
-		la1.setBounds(320, 125, 70, 30);
+		la1.setBounds(0, 125, 70, 30);
 		la1.setFont(new Font("맑은 고딕",Font.BOLD,14));
-		tf1.setBounds(400, 125, 1180, 30); // 이름입력칸
+		tf1.setBounds(80, 125, 1180, 30); // 이름입력칸
 		add(la1); add(tf1);
 
-		la2.setBounds(320, 165, 450, 30);
+		la2.setBounds(0, 165, 450, 30);
 		la2.setFont(new Font("맑은 고딕",Font.BOLD,14));
-		tf2.setBounds(400, 165, 1180, 30); // 제목입력칸
+		tf2.setBounds(80, 165, 1180, 30); // 제목입력칸
 		add(la2); add(tf2);
 		
-		la3.setBounds(320, 205, 70, 30);
+		la3.setBounds(0, 205, 70, 30);
 		la3.setFont(new Font("맑은 고딕",Font.BOLD,14));
-		js.setBounds(400, 205, 1180, 500); // 글쓰기창
+		js.setBounds(80, 205, 1180, 500); // 글쓰기창
 		add(la3); add(js);
 
-		la4.setBounds(320, 715, 70, 30);
+		la4.setBounds(0, 715, 70, 30);
 		la4.setFont(new Font("맑은 고딕",Font.BOLD,14));
-		tf3.setBounds(400, 715, 1180, 30); // 비번입력칸
+		tf3.setBounds(80, 715, 1180, 30); // 비번입력칸
 		add(la4); add(tf3);
 		
 		JPanel p=new JPanel();
-		b1.setFont(new Font("맑은 고딕",Font.BOLD,15));
-		b2.setFont(new Font("맑은 고딕",Font.BOLD,15));
-//		b1.setBackground(Color.GRAY);
-//      b1.setForeground(Color.WHITE);
+		b1.setBackground(Color.GRAY);
+		b1.setForeground(Color.WHITE);
 		p.setLayout(new FlowLayout(FlowLayout.CENTER,30,5));
 		p.add(b1); p.add(b2);
-		p.setBounds(0, 755, 1920, 35);
+		p.setBounds(0, 765, 1260, 35);
 		add(p);
 		
 		b1.addActionListener(this);

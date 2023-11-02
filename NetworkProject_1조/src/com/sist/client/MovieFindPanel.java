@@ -44,22 +44,27 @@ public class MovieFindPanel extends JPanel implements ActionListener {
 		};
 		table=new JTable(model);
 		table.setRowHeight(200);
+		table.getTableHeader().setPreferredSize(new Dimension(30,30));
 		JScrollPane js=new JScrollPane(table);
 		
 		// 배치
+		tf.setSize(600, 40);
+		tf.setLayout(new FlowLayout(FlowLayout.CENTER,30,5));
 		JPanel p=new JPanel();
+//		b1.setFont(new Font("맑은 고딕",Font.PLAIN,14));
+//		b2.setFont(new Font("맑은 고딕",Font.PLAIN,14));
 		p.add(tf);
 		p.add(b1);
 		p.add(b2);
 		
 		
-//		setLayout(new BorderLayout());
-//		add("North",p);
-//		add("Center",js);
-		setLayout(null);
-		p.setBounds(320, 10, 1280, 100);
-		js.setBounds(320, 110, 1280, 800);
-		add(p); add(js);
+		setLayout(new BorderLayout());
+		add("North",p);
+		add("Center",js);
+//		setLayout(null);
+//		p.setBounds(320, 10, 1280, 100);
+//		js.setBounds(320, 110, 1280, 800);
+//		add(p); add(js);
 		b1.addActionListener(this);
 		b2.addActionListener(this);
 		tf.addActionListener(this);

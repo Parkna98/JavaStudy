@@ -49,18 +49,19 @@ public class BoardListPanel extends JPanel implements ActionListener, MouseListe
 		table.getColumn("이름").setPreferredWidth(100);
 		table.getColumn("작성일").setPreferredWidth(150);
 		table.getColumn("조회수").setPreferredWidth(50);
+		table.getColumn("번호").setCellRenderer(null);
 		table.getTableHeader().setPreferredSize(new Dimension(30,30)); // 방이름 탭 높이 
 				
 		JScrollPane js=new JScrollPane(table);
 		 
-		b1=new JButton("새글");
+		b1=new JButton("     새글     ");
 		b1.setFont(new Font("맑은 고딕",Font.PLAIN,15)); // 새글 폰트 크기
-		b2=new JButton("검색");
+		b2=new JButton("     검색     ");
 		b3=new JButton("이전");
-		b3.setFont(new Font("맑은 고딕",Font.PLAIN,15)); // 이전 폰트 크기 
+		b3.setFont(new Font("맑은 고딕",Font.PLAIN,14)); // 이전 폰트 크기 
 		b4=new JButton("다음");
-		b4.setFont(new Font("맑은 고딕",Font.PLAIN,15)); // 다음 폰트 크기 
-		la=new JLabel("자유 게시판");
+		b4.setFont(new Font("맑은 고딕",Font.PLAIN,14)); // 다음 폰트 크기 
+		la=new JLabel("자유게시판");
 		pageLa=new JLabel("1 page / 1 pages");
 		pageLa.setFont(new Font("맑은 고딕",Font.PLAIN,15)); // page 폰트 크기 
 		
@@ -68,22 +69,23 @@ public class BoardListPanel extends JPanel implements ActionListener, MouseListe
 		setLayout(null); // 사용자 정의 배치
 		la.setHorizontalAlignment(JLabel.CENTER);
 		la.setFont(new Font("맑은 고딕",Font.BOLD,35)); // 보통의 글자크기 default 20
-		la.setBounds(320, 15, 1260, 50);
+		la.setBounds(0, 15, 1260, 50);
 		add(la);
 		
-		b1.setBounds(1480, 75, 100, 30);
+		b1.setBounds(1160, 75, 100, 30);
+		b1.setFont(new Font("맑은 고딕",Font.BOLD,15));
 		add(b1);
 		
-		js.setBounds(320, 115, 1260, 610);
+		js.setBounds(0, 115, 1260, 610);
 		add(js);
 		
 		JPanel p=new JPanel();
-		p.setFont(new Font("굴림체",Font.PLAIN,15)); // 페이지 쪽 폰트 크기
+		p.setFont(new Font("맑은 고딕",Font.PLAIN,15)); // 페이지 쪽 폰트 크기
 		p.add(b3);	// 순서대로 해줘야함
 		p.add(pageLa);
 		p.add(b4);
 		
-		p.setBounds(600, 765, 710, 35);
+		p.setBounds(0, 765, 1260, 35);
 		add(p);
 		
 		// 이벤트 등록 => b1을 누르면 이 클래스가 갖고있는 메소드를 호출해라

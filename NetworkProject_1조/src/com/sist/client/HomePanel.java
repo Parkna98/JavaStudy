@@ -27,7 +27,7 @@ public class HomePanel extends JPanel implements ActionListener,MouseListener{
 	public HomePanel(ControllPanel cp) {
 		this.cp=cp;
 		JPanel p=new JPanel();
-		p.setLayout(new GridLayout(1,3,20,20)); // 1줄에 3개 배치 (간격 5,5)
+		p.setLayout(new GridLayout(1,3,10,10)); // 1줄에 3개 배치 (간격 5,5)
 		b1=new JButton("예매 순위");
 		b1.setPreferredSize(new Dimension(300,45));
 		b2=new JButton("박스 오피스");
@@ -38,10 +38,11 @@ public class HomePanel extends JPanel implements ActionListener,MouseListener{
 		b4.setPreferredSize(new Dimension(300,45));
 		b5=new JButton("Wave");
 		b5.setPreferredSize(new Dimension(300,45));
+	//	p.setBounds(0, 15, 1280, 35);
 		p.add(b1); p.add(b2); p.add(b3); p.add(b4); p.add(b5);
 		
-		pan.setLayout(new GridLayout(2,5,5,5)); // 총12개이니까 4줄에 각 3개씩
-		
+		pan.setLayout(new GridLayout(2,5,10,10)); // 총 12개이니까 4줄에 각 3개씩
+//		pan.setBounds(0, 50, 1280, 35);
 		// 배치
 		setLayout(new BorderLayout()); // 스크롤바를 만들기위한 borderlayout
 		add("North",p); 

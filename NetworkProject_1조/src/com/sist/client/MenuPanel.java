@@ -17,7 +17,7 @@ public class MenuPanel extends JPanel // 메뉴바 만들기 (Panel하나가 화
 		b5=new JButton("뉴스 검색");
 		b6=new JButton("종료");
 		
-		setLayout(new GridLayout(1,6,10,10)); // GridLayout(a,b,c,d) : 버튼 a개를 b줄에 배치 => 5개를 1줄에 (세로로 5개), c,d는 버튼 간 간격 
+		setLayout(new GridLayout(1,5,10,10)); // GridLayout(a,b,c,d) : 버튼 a개를 b줄에 배치 => 5개를 1줄에 (세로로 5개), c,d는 버튼 간 간격 
 											//							1,5 => 1개씩 5줄 (가로 한줄)
 		add(b1);add(b2);add(b3);add(b4);add(b5);add(b6);
 		

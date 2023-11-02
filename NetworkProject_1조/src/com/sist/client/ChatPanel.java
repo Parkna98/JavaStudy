@@ -19,7 +19,7 @@ public class ChatPanel extends JPanel {
 		table1=new JTable(model1);
 		JScrollPane js1=new JScrollPane(table1);
 		
-		js1.setBounds(320, 15, 700, 500);
+		js1.setBounds(0, 15, 650, 435);
 		add(js1);
 		
 		String[] col2={"ID","이름","성별","위치"};
@@ -29,20 +29,20 @@ public class ChatPanel extends JPanel {
 		table2=new JTable(model2);
 		JScrollPane js2=new JScrollPane(table2);
 		
-		js2.setBounds(320, 525, 700, 300);
+		js2.setBounds(0, 460, 650, 340);
 		add(js2);
 		
 		pane=new JTextArea();
 		JScrollPane js3=new JScrollPane(pane); // 스크롤
 		pane.setEditable(false);
 		
-		js3.setBounds(1030,15,550,500);
+		js3.setBounds(660, 15, 600, 435);
 		add(js3);
 		
 		bar=js3.getVerticalScrollBar(); // 채팅이 길어지면 새로운 채팅을 볼수있게 스크롤이 자동으로 내려가는 기능추가
 		
 		tf=new JTextField();
-		tf.setBounds(1030, 520, 550, 30);
+		tf.setBounds(660, 460, 600, 30);
 		add(tf);
 		
 		b1=new JButton("방만들기");
@@ -60,7 +60,7 @@ public class ChatPanel extends JPanel {
 		p.add(b4);
 		p.add(b5);
 		p.add(b6);
-		p.setBounds(1030, 560, 550, 265);
+		p.setBounds(660, 500, 600, 300);
 		add(p);
 	}
 }
