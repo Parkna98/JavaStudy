@@ -13,10 +13,12 @@ import com.sist.vo.MovieReservationVO;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.io.*;
 import java.net.*;
 
-public class ClientMainForm extends JFrame implements ActionListener,Runnable{
+public class ClientMainForm extends JFrame implements ActionListener,Runnable,MouseListener{
 	MenuPanel mp=new MenuPanel();
 	ControllPanel cp=new ControllPanel();
 	JLabel logo=new JLabel();
@@ -28,6 +30,15 @@ public class ClientMainForm extends JFrame implements ActionListener,Runnable{
     Socket s; // 전화기
     OutputStream out; // 송신 (서버값받아서 쓰레드가 다시 보내주는 값?)
     BufferedReader in; // 수신 (서버(사용자)가 보내주는 값)
+    
+    // ID 저장
+    String myId;
+    // 테이블 선택 인덱스
+    int selectRow=-1;
+    // 쪽지 클래스
+    String myid;
+    SendMessage sm=new SendMessage();
+    GetMessage rm=new GetMessage();
     
 	public ClientMainForm() {
 		setLayout(null); // 화면 배치 => null:지원안받음 => 직접배치
@@ -60,6 +71,17 @@ public class ClientMainForm extends JFrame implements ActionListener,Runnable{
     	cp.cp.tf.addActionListener(this); // cp(chatpanel) 창에서 tf쪽에 엔터쳤을 때 수행
     	cp.cp.b6.addActionListener(this);
     	setDefaultCloseOperation(DO_NOTHING_ON_CLOSE); // 우측상단 x표시로는 종료가 되지 않는다
+    	
+    	cp.cp.b3.addActionListener(this);//쪽지보내기
+    	cp.cp.b2.addActionListener(this);//정보 보기
+    	cp.cp.table1.addMouseListener(this);
+    	
+    	// 쪽지 등록
+    	sm.b1.addActionListener(this);
+    	sm.b2.addActionListener(this);
+    	rm.b1.addActionListener(this);
+    	rm.b2.addActionListener(this);
+    	
 		
 	}
 	public static void main(String[] args) {
@@ -141,11 +163,48 @@ public class ClientMainForm extends JFrame implements ActionListener,Runnable{
 				out.write((Function.EXIT+"|\n").getBytes()); // 클라이언트보낼때 \n 줘야함 => server에서 readline()으로 읽기때문
 			}catch(Exception ex) {}
 		}
+		else if(e.getSource() == cp.cp.b3) {
+			int row = cp.cp.table2.getSelectedRow();
+			sm.tf.setText(cp.cp.table2.getValueAt(row, 0).toString());
+			sm.tf.setEditable(false);
+			sm.ta.setText("");
+			sm.setVisible(true);
+		}
+		else if(e.getSource()==sm.b1) {
+			String id = sm.tf.getText();
+			String content = sm.ta.getText();
+			if(content.length()<1) {
+				sm.ta.requestFocus();
+				return;
+			}
+			
+			String msg = Function.MSGSEND+"|"+id+"|"+content+"\n";
+			
+			try {
+				out.write(msg.getBytes());
+			}catch(Exception ex){
+				ex.printStackTrace();
+			}
+			sm.setVisible(false);
+		}
+		else if(e.getSource() == sm.b2) { //취소
+			sm.setVisible(false);
+		}
+		else if(e.getSource() == rm.b1) { // 답장하기
+			sm.tf.setText(rm.tf.getText()); 
+			sm.ta.setText("");
+			sm.setVisible(true);
+			rm.setVisible(false);
+			
+		}
+		else if(e.getSource() == rm.b2) { // 취소
+			rm.setVisible(false);
+		}
 		}
 	// 서버와 연결
 		public void connect(String id, String name, String sex) {
 			try {
-				s=new Socket("192.168.0.124",1024); // Socket(ip,PORT) => 서버연결
+				s=new Socket("192.168.0.105",11111); // Socket(ip,PORT) => 서버연결
 				out=s.getOutputStream();
 				in=new BufferedReader(new InputStreamReader(s.getInputStream())); // 서버 값
 				
@@ -184,6 +243,14 @@ public class ClientMainForm extends JFrame implements ActionListener,Runnable{
 						cp.cp.pane.append(st.nextToken()+"\n");
 					}
 					break;
+					case Function.MSGSEND:{
+						String id = st.nextToken();
+						String content = st.nextToken();
+						rm.tf.setText(id);
+						rm.ta.setText(content);
+						rm.setVisible(true);
+					}
+					break;
 					case Function.MYEXIT:{
 						System.exit(0); // 값이 필요없음
 					}
@@ -204,4 +271,46 @@ public class ClientMainForm extends JFrame implements ActionListener,Runnable{
 			}catch(Exception ex) {}
 		
 	}
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			// TODO Auto-generated method stub
+			if(e.getSource()==cp.cp.table2)
+			{
+				//if(e.getClickCount()==2)// 더블 클릭
+				//{
+				    selectRow=cp.cp.table2.getSelectedRow();
+					String id=cp.cp.table2.getValueAt(selectRow, 0).toString();
+					//JOptionPane.showMessageDialog(this, "선택된 ID:"+id);
+					if(id.equals(myId))// 본인이면 
+					{
+						cp.cp.b1.setEnabled(false);
+						cp.cp.b2.setEnabled(false);
+					}
+					else //본인이 아닌 경우 
+					{
+						cp.cp.b1.setEnabled(true);
+						cp.cp.b2.setEnabled(true);
+					}
+			}
+		}
+		@Override
+		public void mousePressed(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		@Override
+		public void mouseExited(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
 }

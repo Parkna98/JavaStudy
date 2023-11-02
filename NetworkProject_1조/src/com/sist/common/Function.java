@@ -7,6 +7,8 @@ public class Function {
 	public static final int LOGIN=100;
 	public static final int MYLOG=110;
 	public static final int WAITCHAT=200;
+	public static final int MSGSEND=300;
+	public static final int INFO=400;
 	public static final int EXIT=900;
 	public static final int MYEXIT=910;
 	// MYXXX => 먼저 로그인한사람, 늦게 로그인한사람, 종료시에 모두종료, 종료시에 나만 종료 구분

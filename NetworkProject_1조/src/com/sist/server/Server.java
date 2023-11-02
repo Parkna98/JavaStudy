@@ -111,6 +111,20 @@ public class Server implements Runnable{
 						messageAll(Function.WAITCHAT+"|["+name+"]"+data);
 					}
 					break;
+					//
+					case Function.MSGSEND:{
+						String yourid=st.nextToken();
+						String content=st.nextToken();
+						for(Client user:waitVc) {
+							if(yourid.equals(user.id)) {
+								String msgStr=Function.MSGSEND+"|"+id+"|"+content;
+								user.messageTo(msgStr);
+								break;
+							}
+						}
+					}
+					break;
+					//
 					case Function.EXIT:{
 						messageAll(Function.WAITCHAT+"|[알림 ☞"+name+"님 퇴장하셨습니다.");
 						messageAll(Function.EXIT+"|"+id);
