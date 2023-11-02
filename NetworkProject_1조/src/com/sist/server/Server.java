@@ -112,6 +112,17 @@ public class Server implements Runnable{
 					}
 					break;
 					//
+					case Function.INFO:{
+						String yourid=st.nextToken();
+						for(Client user:waitVc) {
+							if(yourid.equals(user.id)) {
+								messageTo(Function.INFO+"|"+user.id+"|"+user.name+"|"+user.sex);
+							}
+						}
+					}
+					break;
+					//
+					//
 					case Function.MSGSEND:{
 						String yourid=st.nextToken();
 						String content=st.nextToken();

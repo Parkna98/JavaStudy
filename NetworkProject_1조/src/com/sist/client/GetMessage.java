@@ -30,6 +30,6 @@ public class GetMessage extends JFrame{
 		add("Center", js);
 		add("South", p2);
 		
-		setSize(700, 800);
+		setSize(350, 400);
 	}
 }

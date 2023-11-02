@@ -73,7 +73,7 @@ public class ClientMainForm extends JFrame implements ActionListener,Runnable,Mo
     	setDefaultCloseOperation(DO_NOTHING_ON_CLOSE); // 우측상단 x표시로는 종료가 되지 않는다
     	
     	cp.cp.b3.addActionListener(this);//쪽지보내기
-    	cp.cp.b2.addActionListener(this);//정보 보기
+    	cp.cp.b4.addActionListener(this);//정보 보기
     	cp.cp.table1.addMouseListener(this);
     	
     	// 쪽지 등록
@@ -200,6 +200,16 @@ public class ClientMainForm extends JFrame implements ActionListener,Runnable,Mo
 		else if(e.getSource() == rm.b2) { // 취소
 			rm.setVisible(false);
 		}
+		else if(e.getSource()==cp.cp.b4) {
+			int row = cp.cp.table2.getSelectedRow();
+			String id = cp.cp.table2.getValueAt(row, 0).toString();
+			String msg = Function.INFO+"|"+id+"|"+"\n";
+			try {
+				out.write(msg.getBytes());
+			}catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		}
 		}
 	// 서버와 연결
 		public void connect(String id, String name, String sex) {
@@ -251,6 +261,13 @@ public class ClientMainForm extends JFrame implements ActionListener,Runnable,Mo
 						rm.setVisible(true);
 					}
 					break;
+					case Function.INFO:{
+						String data="아이디:"+st.nextToken()+"\n"
+							     +"이름:"+st.nextToken()+"\n"
+							     +"성별:"+st.nextToken();
+						JOptionPane.showMessageDialog(this, data);
+						break;
+					}
 					case Function.MYEXIT:{
 						System.exit(0); // 값이 필요없음
 					}
